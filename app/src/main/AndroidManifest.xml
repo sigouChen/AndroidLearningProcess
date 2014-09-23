@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MyActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,8 +28,29 @@
             android:name=".SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
+        <activity
+            android:name=".MyActivity"
+            android:label="MyActivity" >
+        </activity>
+        <activity
+            android:name=".BaseActivity"
+            android:label="@string/title_activity_base" >
+        </activity>
+        <activity
+            android:name=".FloatWindow.FloatWindowActivity"
+            android:label="@string/title_activity_float_window" >
+        </activity>
+
+        <service
+            android:name=".FloatWindow.FloatWindowService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
 </manifest>

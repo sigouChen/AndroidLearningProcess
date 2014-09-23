@@ -27,7 +27,7 @@ public class MyActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
-        startButton= (Button) findViewById(R.id.button);
+        startButton= (Button) findViewById(R.id.button1);
         stopButton= (Button) findViewById(R.id.button2);
         startIntentServiceButton= (Button) findViewById(R.id.intentService_button);
         stopIntentServiceButton= (Button) findViewById(R.id.stop_intentService);
@@ -78,7 +78,7 @@ public class MyActivity extends ActionBarActivity {
                 IntentService intentService;
                 Handler handler;
                 bindService(intent,mServiceConnection, Context.BIND_AUTO_CREATE);
-               // startService(intent);
+                startService(intent);
                 /***
                  * 调用startService之后，service调用onCreate 和onStartCommand方法,通过该方法启动的service会一直在运行，即使他的调用方已经结束了。
                  *所以如果使用这种方式启动，If you implement this, it is your responsibility to stop the service
