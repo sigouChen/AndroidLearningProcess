@@ -4,11 +4,11 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <ListView
-        android:id="@+id/listview"
-        android:cacheColorHint="#88888888"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/textview_title"/>
 
 </LinearLayout>

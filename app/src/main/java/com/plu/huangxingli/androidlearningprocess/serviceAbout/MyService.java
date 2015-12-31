@@ -1,4 +1,4 @@
-package com.plu.huangxingli.androidlearningprocess;
+package com.plu.huangxingli.androidlearningprocess.serviceAbout;
 
 import android.app.Service;
 import android.content.Intent;
@@ -26,7 +26,7 @@ public class MyService extends Service {
         return myBinder;
 
     }
-    class MyBinder extends Binder{
+    public class MyBinder extends Binder{
 
         public int getCount(){
 

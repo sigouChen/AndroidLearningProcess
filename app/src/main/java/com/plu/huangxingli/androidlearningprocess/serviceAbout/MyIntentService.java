@@ -1,4 +1,4 @@
-package com.plu.huangxingli.androidlearningprocess;
+package com.plu.huangxingli.androidlearningprocess.serviceAbout;
 
 import android.app.IntentService;
 import android.content.Intent;

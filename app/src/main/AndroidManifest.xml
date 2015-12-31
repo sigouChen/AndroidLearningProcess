@@ -18,18 +18,18 @@
         </activity>
 
         <service
-            android:name=".MyService"
+            android:name=".serviceAbout.MyService"
             android:enabled="true"
             android:exported="true" >
         </service>
-        <service android:name=".MyIntentService" />
+        <service android:name=".serviceAbout.MyIntentService" />
 
         <activity
-            android:name=".SecondActivity"
+            android:name=".serviceAbout.ServiceActivity$SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
         <activity
-            android:name=".MyActivity"
+            android:name=".serviceAbout.ServiceActivity"
             android:label="MyActivity" >
         </activity>
         <activity

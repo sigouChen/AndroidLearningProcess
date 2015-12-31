@@ -1,4 +1,4 @@
-package com.plu.huangxingli.androidlearningprocess;
+package com.plu.huangxingli.androidlearningprocess.serviceAbout;
 
 import android.app.IntentService;
 import android.content.ComponentName;
@@ -14,10 +14,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.plu.huangxingli.androidlearningprocess.R;
+
 import java.util.logging.Handler;
 
 
-public class MyActivity extends ActionBarActivity {
+public class ServiceActivity extends ActionBarActivity {
 
     private String TAG="TAG";
 
@@ -35,9 +37,9 @@ public class MyActivity extends ActionBarActivity {
         jumpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  Intent intent=new Intent(MyActivity.this,SecondActivity.class);
+              //  Intent intent=new Intent(ServiceActivity.this,SecondActivity.class);
                // startActivity(intent);
-                //MyActivity.this.finish();
+                //ServiceActivity.this.finish();
                 android.os.Process.killProcess(android.os.Process.myPid());
             }
         });
@@ -46,7 +48,7 @@ public class MyActivity extends ActionBarActivity {
             public void onClick(View v) {
                 Log.v(TAG,"startIntentServiceButton is pressed");
                 MyIntentService myIntentService=new MyIntentService("myIntentService");
-                Intent intent=new Intent(MyActivity.this,MyIntentService.class);
+                Intent intent=new Intent(ServiceActivity.this,MyIntentService.class);
                 startService(intent);
               // bindService(intent,mServiceConnection,Context.BIND_AUTO_CREATE);
             }
@@ -55,7 +57,7 @@ public class MyActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(MyActivity.this,MyIntentService.class);
+                Intent intent=new Intent(ServiceActivity.this,MyIntentService.class);
                 stopService(intent);
                 /**
                  * 当调用stopService方法时，service的onDestroy方法会立即被调用，但是服务里面新开的线程还在跑，直到跑完。
@@ -73,7 +75,7 @@ public class MyActivity extends ActionBarActivity {
                  * onHandleIntent-->onDestroy.
                  * 也就是说IntentService自己处理完onHandleIntent方法后，就会自己结束自己。大无畏的精神啊，然后就调用onDestroy了。
                  */
-                Intent intent = new Intent(MyActivity.this, MyService.class);
+                Intent intent = new Intent(ServiceActivity.this, MyService.class);
 
                 IntentService intentService;
                 Handler handler;
@@ -117,7 +119,7 @@ public class MyActivity extends ActionBarActivity {
         stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MyActivity.this,MyService.class);
+                Intent intent=new Intent(ServiceActivity.this,MyService.class);
 
                 unbindService(mServiceConnection);
                // stopService(intent);
@@ -165,5 +167,32 @@ public class MyActivity extends ActionBarActivity {
     }
 
 
+    public static class SecondActivity extends ActionBarActivity {
 
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_second);
+        }
+
+
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
+            // Inflate the menu; this adds items to the action bar if it is present.
+            getMenuInflater().inflate(R.menu.second, menu);
+            return true;
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            // Handle action bar item clicks here. The action bar will
+            // automatically handle clicks on the Home/Up button, so long
+            // as you specify a parent activity in AndroidManifest.xml.
+            int id = item.getItemId();
+            if (id == R.id.action_settings) {
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
+    }
 }
