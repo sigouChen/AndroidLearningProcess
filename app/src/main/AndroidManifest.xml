@@ -28,6 +28,7 @@
             android:name=".serviceAbout.ServiceActivity$SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
+        <activity android:name=".TimerAbout.TimerActivity"></activity>
         <activity
             android:name=".serviceAbout.ServiceActivity"
             android:label="MyActivity" >

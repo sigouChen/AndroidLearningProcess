@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.plu.huangxingli.androidlearningprocess.FloatWindow.FloatWindowActivity;
+import com.plu.huangxingli.androidlearningprocess.TimerAbout.TimerActivity;
 import com.plu.huangxingli.androidlearningprocess.serviceAbout.ServiceActivity;
 import com.plu.huangxingli.androidlearningprocess.adapter.TitleAdapter;
 
@@ -45,6 +46,7 @@ public class MainActivity extends BaseActivity {
     public void initLessonTitle(){
         lessonMap.put("service相关", ServiceActivity.class);
         lessonMap.put("悬浮框相关", FloatWindowActivity.class);
+        lessonMap.put("计时器", TimerActivity.class);
 
     }
 }
