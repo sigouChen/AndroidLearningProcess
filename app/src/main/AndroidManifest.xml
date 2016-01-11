@@ -42,6 +42,8 @@
             android:label="@string/title_activity_float_window" >
         </activity>
 
+        <activity android:name=".DrawerAbout.DrawerLayoutActivity"></activity>
+
         <service
             android:name=".FloatWindow.FloatWindowService"
             android:enabled="true"
