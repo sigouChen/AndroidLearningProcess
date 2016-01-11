@@ -13,7 +13,7 @@ public class TimerActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        CountDownTimer countDownTimer=new CountDownTimer(3000,1000) {
+        CountDownTimer countDownTimer=new CountDownTimer(3000,3000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 Log.v("PLU","-----onTick");
