@@ -42,6 +42,7 @@
             android:name=".BaseActivity"
             android:label="@string/title_activity_base" >
         </activity>
+        <activity android:name=".activity.AnimatorAboutActivity"></activity>
         <activity
             android:name=".FloatWindow.FloatWindowActivity"
             android:label="@string/title_activity_float_window" >
