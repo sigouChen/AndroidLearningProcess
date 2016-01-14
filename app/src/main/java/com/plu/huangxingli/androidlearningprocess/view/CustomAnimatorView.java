@@ -1,5 +1,7 @@
 package com.plu.huangxingli.androidlearningprocess.view;
 
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -21,6 +23,19 @@ public class CustomAnimatorView extends View {
     Point currentPos;
     Paint paint;
     static final int RADIS=40;
+    private int color;
+
+    public void setColor(int color) {
+        this.color = color;
+        paint.setColor(color);
+        invalidate();
+
+
+    }
+
+    public int getColor() {
+        return color;
+    }
 
     public CustomAnimatorView(Context context) {
         super(context);
@@ -43,6 +58,8 @@ public class CustomAnimatorView extends View {
 
     }
 
+
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -64,10 +81,22 @@ public class CustomAnimatorView extends View {
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                currentPos= (Point) animation.getAnimatedValue();
+                currentPos = (Point) animation.getAnimatedValue();
                 invalidate();
             }
         });
+
+        ObjectAnimator objectAnimator=ObjectAnimator.ofObject(this,"color",new ArgbEvaluator(), Color.RED,Color.BLUE);
+        objectAnimator.setDuration(4000);
+        objectAnimator.addUpdateListener(new ObjectAnimator.AnimatorUpdateListener(){
+
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                animation.getAnimatedValue();
+            }
+        });
+
+        objectAnimator.start();
     }
 
     public void drawCircle(Canvas canvas){
@@ -85,6 +114,7 @@ public class CustomAnimatorView extends View {
         public Point evaluate(float fraction, Point startValue, Point endValue) {
             int x= (int) (startValue.x+fraction*(endValue.x-startValue.x));
             int y= (int) (startValue.y+fraction*(endValue.y-startValue.y));
+
 
             return new Point(x,y);
         }
