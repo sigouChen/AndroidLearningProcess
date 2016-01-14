@@ -25,6 +25,7 @@ public class CustomAnimatorView extends View {
     static final int RADIS=40;
     private int color;
 
+    //注意使用ObjectAnimation的时候，对要进行动画的属性必须要有set 和 get方法，注意 此处set方法里面要invalidate才起作用
     public void setColor(int color) {
         this.color = color;
         paint.setColor(color);

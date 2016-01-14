@@ -1,15 +1,10 @@
 package com.plu.huangxingli.androidlearningprocess.activity;
 
-import android.animation.ArgbEvaluator;
 import android.animation.FloatEvaluator;
-import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -22,7 +17,7 @@ import java.util.ArrayList;
 /**
  * Created by lily on 16-1-9.
  */
-public class AnimatorAboutActivity extends BaseActivity{
+public class ValueAnimatorActivity extends BaseActivity{
 
 
     @Override
@@ -34,7 +29,7 @@ public class AnimatorAboutActivity extends BaseActivity{
         for (int i=0;i<50;i++){
             itemList.add("item "+i);
         }
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(AnimatorAboutActivity.this,android.R.layout.simple_list_item_1,android.R.id.text1,itemList);
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(ValueAnimatorActivity.this,android.R.layout.simple_list_item_1,android.R.id.text1,itemList);
         listView.setAdapter(adapter);
         final TextView textView= (TextView) findViewById(R.id.textview);
 
