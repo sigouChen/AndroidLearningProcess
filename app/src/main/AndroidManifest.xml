@@ -29,6 +29,10 @@
         </service>
         <service android:name=".serviceAbout.MyIntentService" />
 
+        <activity android:name=".activity.TimerTextViewActivity"></activity>
+
+        <activity android:name=".AnimateAbout.AnimateActivity"></activity>
+
         <activity
             android:name=".serviceAbout.ServiceActivity$SecondActivity"
             android:label="@string/title_activity_second" >

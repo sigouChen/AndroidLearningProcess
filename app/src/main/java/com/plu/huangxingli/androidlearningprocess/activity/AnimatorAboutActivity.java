@@ -1,9 +1,15 @@
 package com.plu.huangxingli.androidlearningprocess.activity;
 
+import android.animation.ArgbEvaluator;
+import android.animation.FloatEvaluator;
+import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -32,7 +38,11 @@ public class AnimatorAboutActivity extends BaseActivity{
         listView.setAdapter(adapter);
         final TextView textView= (TextView) findViewById(R.id.textview);
 
-        ValueAnimator valueAnimator=ValueAnimator.ofObject(new MyTypeValue(),0f,30f);
+       ValueAnimator valueAnimator=ValueAnimator.ofObject(new FloatEvaluator(),0f,30f);
+       // ValueAnimator valueAnimator=ValueAnimator.ofFloat(0f, 30f);
+
+      //  valueAnimator.setInterpolator(new );
+
 
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -43,6 +53,7 @@ public class AnimatorAboutActivity extends BaseActivity{
 
             }
         });
+
 
         valueAnimator.setDuration(5000);
         valueAnimator.start();
@@ -57,6 +68,7 @@ public class AnimatorAboutActivity extends BaseActivity{
         public Float evaluate(float fraction, Float startValue, Float endValue) {
 
             float result=startValue+(endValue-startValue)*fraction;
+
             Log.v("PLU","---evaluate is "+result);
             return result;
         }
