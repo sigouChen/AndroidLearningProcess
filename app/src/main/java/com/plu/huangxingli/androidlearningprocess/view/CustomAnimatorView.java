@@ -11,6 +11,7 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
 
 import com.plu.huangxingli.androidlearningprocess.R;
 
@@ -77,6 +78,7 @@ public class CustomAnimatorView extends View {
         Point startPoint=new Point(RADIS, RADIS);
         Point endPoint=new Point(getWidth()-RADIS,getHeight()-RADIS);
         ValueAnimator valueAnimator=ValueAnimator.ofObject(new PointEvaluate(),startPoint,endPoint);
+      //  LinearInterpolator linearInterpolator;
         valueAnimator.setDuration(4000);
         valueAnimator.start();
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -89,7 +91,7 @@ public class CustomAnimatorView extends View {
 
         ObjectAnimator objectAnimator=ObjectAnimator.ofObject(this,"color",new ArgbEvaluator(), Color.RED,Color.BLUE);
         objectAnimator.setDuration(4000);
-        objectAnimator.addUpdateListener(new ObjectAnimator.AnimatorUpdateListener(){
+        objectAnimator.addUpdateListener(new ObjectAnimator.AnimatorUpdateListener() {
 
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
