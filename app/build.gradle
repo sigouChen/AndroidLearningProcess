@@ -26,6 +26,17 @@ dependencies {
 
 
 
+
+
     compile 'com.android.support:recyclerview-v7:21.0.3'
+
+    compile 'com.alipay.euler:andfix:0.3.1@aar'
+
+    compile files('libs/BmobSDK_V3.4.5_1111.jar')
+    compile files('libs/Bmob_Push_V0.6beta_20150408.jar')
+    compile files('libs/filechoose.jar')
+    compile files('libs/okhttp-2.4.0.jar')
+    compile files('libs/okio-1.4.0.jar')
+
 
 }

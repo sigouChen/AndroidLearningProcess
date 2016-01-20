@@ -9,13 +9,16 @@ import android.widget.ListView;
 
 import com.plu.huangxingli.androidlearningprocess.AnimateAbout.AnimateActivity;
 import com.plu.huangxingli.androidlearningprocess.DrawerAbout.DrawerLayoutActivity;
+import com.plu.huangxingli.androidlearningprocess.FileAbout.FileActivity;
 import com.plu.huangxingli.androidlearningprocess.FloatWindow.FloatWindowActivity;
 import com.plu.huangxingli.androidlearningprocess.TimerAbout.TimerActivity;
+import com.plu.huangxingli.androidlearningprocess.ToastAbout.ToastActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.FrameWorkTest;
 import com.plu.huangxingli.androidlearningprocess.activity.HandlerThreadActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.ValueAnimatorActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.SurfaceViewTest;
 import com.plu.huangxingli.androidlearningprocess.activity.TimerTextViewActivity;
+import com.plu.huangxingli.androidlearningprocess.bmobAbout.BomboActivity;
 import com.plu.huangxingli.androidlearningprocess.serviceAbout.ServiceActivity;
 import com.plu.huangxingli.androidlearningprocess.adapter.TitleAdapter;
 
@@ -59,6 +62,9 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("自定义动画view",AnimateActivity.class);
         lessonMap.put("测试线程池与HandlerThread一起使用", HandlerThreadActivity.class);
         lessonMap.put("android 接口的封装", FrameWorkTest.class);
+        lessonMap.put("bmob 测试使用", BomboActivity.class);
+        lessonMap.put("file文件处理相关", FileActivity.class);
+        lessonMap.put("自定义toast", ToastActivity.class);
 
     }
 }
