@@ -15,6 +15,8 @@ import com.plu.huangxingli.androidlearningprocess.TimerAbout.TimerActivity;
 import com.plu.huangxingli.androidlearningprocess.ToastAbout.ToastActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.FrameWorkTest;
 import com.plu.huangxingli.androidlearningprocess.activity.HandlerThreadActivity;
+import com.plu.huangxingli.androidlearningprocess.activity.TestInnerClass;
+import com.plu.huangxingli.androidlearningprocess.activity.TimerTaskActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.ValueAnimatorActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.SurfaceViewTest;
 import com.plu.huangxingli.androidlearningprocess.activity.TimerTextViewActivity;
@@ -65,6 +67,8 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("bmob 测试使用", BomboActivity.class);
         lessonMap.put("file文件处理相关", FileActivity.class);
         lessonMap.put("自定义toast", ToastActivity.class);
+        lessonMap.put("many timer tog", TimerTaskActivity.class);
+        lessonMap.put("java编程思想代码", TestInnerClass.class);
 
     }
 }

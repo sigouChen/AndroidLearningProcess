@@ -81,6 +81,8 @@
             android:name=".FloatWindow.FloatWindowActivity"
             android:label="@string/title_activity_float_window" >
         </activity>
+
+        <activity android:name=".activity.TimerTaskActivity"></activity>
         <activity android:name=".activity.SurfaceViewTest" />
         <activity android:name=".DrawerAbout.DrawerLayoutActivity" />
 
@@ -98,6 +100,7 @@
             android:name=".activity.FrameWorkTest"
             android:label="@string/title_activity_frame_work_test" >
         </activity>
+        <activity android:name=".activity.TestInnerClass"></activity>
     </application>
 
 </manifest>
