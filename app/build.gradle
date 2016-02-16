@@ -35,8 +35,13 @@ dependencies {
     compile files('libs/BmobSDK_V3.4.5_1111.jar')
     compile files('libs/Bmob_Push_V0.6beta_20150408.jar')
     compile files('libs/filechoose.jar')
-    compile files('libs/okhttp-2.4.0.jar')
-    compile files('libs/okio-1.4.0.jar')
+   /* compile files('libs/okhttp-2.4.0.jar')
+    compile files('libs/okio-1.4.0.jar')*/
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
+
+    compile files('libs/okhttp-3.0.0-RC1.jar')
+    compile files('libs/okio-1.6.0.jar')
 
 
 }

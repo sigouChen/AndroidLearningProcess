@@ -8,13 +8,12 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
 
     <!-- 网络权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -26,7 +25,6 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -70,8 +68,7 @@
             android:name=".serviceAbout.ServiceActivity"
             android:label="MyActivity" >
         </activity>
-
-        <activity android:name=".ToastAbout.ToastActivity"></activity>
+        <activity android:name=".ToastAbout.ToastActivity" />
         <activity
             android:name=".BaseActivity"
             android:label="@string/title_activity_base" >
@@ -81,16 +78,12 @@
             android:name=".FloatWindow.FloatWindowActivity"
             android:label="@string/title_activity_float_window" >
         </activity>
-
-        <activity android:name=".activity.TimerTaskActivity"></activity>
+        <activity android:name=".activity.TimerTaskActivity" />
         <activity android:name=".activity.SurfaceViewTest" />
         <activity android:name=".DrawerAbout.DrawerLayoutActivity" />
-
-        <activity android:name=".activity.TabHostFragmentTest"></activity>
-
-        <activity android:name=".bmobAbout.BomboActivity"></activity>
-
-        <activity android:name=".FileAbout.FileActivity"></activity>
+        <activity android:name=".activity.TabHostFragmentTest" />
+        <activity android:name=".bmobAbout.BomboActivity" />
+        <activity android:name=".FileAbout.FileActivity" />
 
         <service
             android:name=".FloatWindow.FloatWindowService"
@@ -102,7 +95,11 @@
             android:name=".activity.FrameWorkTest"
             android:label="@string/title_activity_frame_work_test" >
         </activity>
-        <activity android:name=".activity.TestInnerClass"></activity>
+        <activity android:name=".activity.TestInnerClass" />
+        <activity
+            android:name=".retrofit.Main2Activity"
+            android:label="@string/title_activity_main2" >
+        </activity>
     </application>
 
 </manifest>

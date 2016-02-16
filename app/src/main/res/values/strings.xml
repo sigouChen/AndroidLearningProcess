@@ -11,5 +11,6 @@
     <string name="toggle_open">open</string>
     <string name="toggle_close">close</string>
     <string name="title_activity_frame_work_test">FrameWorkTest</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 </resources>
