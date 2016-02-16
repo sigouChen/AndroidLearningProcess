@@ -67,7 +67,7 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("自定义动画view",AnimateActivity.class);
         lessonMap.put("测试线程池与HandlerThread一起使用", HandlerThreadActivity.class);
         lessonMap.put("android 接口的封装", FrameWorkTest.class);
-        lessonMap.put("bmob 测试使用", BomboActivity.class);
+        lessonMap.put("bmob 测试使用１１", BomboActivity.class);
         lessonMap.put("file文件处理相关", FileActivity.class);
         lessonMap.put("自定义toast", ToastActivity.class);
         lessonMap.put("many timer tog", TimerTaskActivity.class);
