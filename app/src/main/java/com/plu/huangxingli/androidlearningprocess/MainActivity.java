@@ -23,6 +23,7 @@ import com.plu.huangxingli.androidlearningprocess.activity.SurfaceViewTest;
 import com.plu.huangxingli.androidlearningprocess.activity.TimerTextViewActivity;
 import com.plu.huangxingli.androidlearningprocess.bmobAbout.BomboActivity;
 import com.plu.huangxingli.androidlearningprocess.fragment.TabHostFragment1;
+import com.plu.huangxingli.androidlearningprocess.mvp.MvpActivity;
 import com.plu.huangxingli.androidlearningprocess.retrofit.Main2Activity;
 import com.plu.huangxingli.androidlearningprocess.serviceAbout.ServiceActivity;
 import com.plu.huangxingli.androidlearningprocess.adapter.TitleAdapter;
@@ -74,6 +75,7 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("java编程思想代码", TestInnerClass.class);
         lessonMap.put("fragmentTabHost　demo", TabHostFragmentTest.class);
         lessonMap.put("retrofit 测试使用", Main2Activity.class);
+        lessonMap.put("测试MVP的简单使用", MvpActivity.class);
 
     }
 }
