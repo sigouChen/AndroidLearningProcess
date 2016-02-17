@@ -2,10 +2,8 @@ package com.plu.huangxingli.androidlearningprocess.retrofit;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.SurfaceHolder;
 import android.view.View;
 import android.widget.Button;
 
@@ -16,7 +14,6 @@ import com.plu.huangxingli.androidlearningprocess.Utils.PluLogUtil;
 import retrofit2.Call;
 
 import retrofit2.Callback;
-import retrofit2.GsonConverterFactory;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
@@ -31,13 +28,15 @@ public class Main2Activity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Retrofit retrofit=new Retrofit.Builder().baseUrl("http://a4.plu.cn/").addConverterFactory(GsonConverterFactory.create()).build();
+                Retrofit retrofit=new Retrofit.Builder().baseUrl("http://a4.plu.cn/")
+                        .addConverterFactory(new CustomConvertFactory())
+                        .build();
                 BannerInterface bannerInterface=retrofit.create(BannerInterface.class);
                 Call<String> result1= bannerInterface.getBanner();
                 result1.enqueue(new Callback<String>() {
                     @Override
                     public void onResponse(Call<String> call, Response<String> response) {
-                        PluLogUtil.log(Main2Activity.class,"------banner response string is "+call);
+                        PluLogUtil.log(Main2Activity.class,"------banner response string is "+response.body().toString());
 
                     }
 
