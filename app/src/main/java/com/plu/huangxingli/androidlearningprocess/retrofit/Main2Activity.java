@@ -11,6 +11,8 @@ import com.plu.huangxingli.androidlearningprocess.R;
 import com.plu.huangxingli.androidlearningprocess.Utils.PluLogUtil;
 
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 
 import retrofit2.Callback;
@@ -25,13 +27,21 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         Button button = (Button) findViewById(R.id.button1);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                HttpLoggingInterceptor httpLoggingInterceptor=new HttpLoggingInterceptor();
+                httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+                OkHttpClient okHttpClient=new OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build();
+              //  okHttpClient.interceptors().add(httpLoggingInterceptor);
                 Retrofit retrofit=new Retrofit.Builder().baseUrl("http://a4.plu.cn/")
                         .addConverterFactory(new CustomConvertFactory())
+                        .client(okHttpClient)
                         .build();
                 BannerInterface bannerInterface=retrofit.create(BannerInterface.class);
+
+
                 Call<String> result1= bannerInterface.getBanner();
                 result1.enqueue(new Callback<String>() {
                     @Override
