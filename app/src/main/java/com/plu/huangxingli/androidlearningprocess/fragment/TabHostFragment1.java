@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.plu.huangxingli.androidlearningprocess.R;
+import com.plu.huangxingli.androidlearningprocess.Utils.PluLogUtil;
 
 /**
  * Created by lily on 16-2-2.
@@ -25,6 +26,7 @@ public class TabHostFragment1 extends Fragment {
         View view=inflater.inflate(R.layout.tab,null);
         TextView textView= (TextView) view.findViewById(R.id.textview);
         Bundle bundle=getArguments();
+        PluLogUtil.log(TabHostFragment1.class,"-----onCreateView");
         String content= (String) bundle.get("content");
         textView.setText(content);
         return view;

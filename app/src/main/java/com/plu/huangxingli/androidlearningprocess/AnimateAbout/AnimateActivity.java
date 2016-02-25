@@ -1,5 +1,6 @@
 package com.plu.huangxingli.androidlearningprocess.AnimateAbout;
 
+import android.graphics.Matrix;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -17,6 +18,7 @@ public class AnimateActivity extends BaseActivity {
         setContentView(R.layout.animate_layout);
         TextView textView= (TextView) findViewById(R.id.textview);
         textView.animate().x(400).y(400).setDuration(1000).start();
+        Matrix matrix;
       //  CustomAnimatorView customAnimatorView= (CustomAnimatorView) findView(R.id.animate_view);
 
 

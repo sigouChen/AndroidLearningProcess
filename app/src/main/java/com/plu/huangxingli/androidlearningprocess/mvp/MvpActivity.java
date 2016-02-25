@@ -1,5 +1,6 @@
 package com.plu.huangxingli.androidlearningprocess.mvp;
 
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -30,6 +31,7 @@ public class MvpActivity extends AppCompatActivity implements ShowDataView{
                 dataPresenter.getListData();
             }
         });
+
 
 
     }
@@ -64,6 +66,16 @@ public class MvpActivity extends AppCompatActivity implements ShowDataView{
 
     @Override
     public void hideErrorView() {
+
+    }
+
+    @Override
+    public void showLoadingView() {
+
+    }
+
+    @Override
+    public void hideLoadingView() {
 
     }
 

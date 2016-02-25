@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:id="@+id/container"
+
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
 
-    <FrameLayout
+   <!-- <FrameLayout
         android:id="@+id/camera_preview"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="600dp"
 
-        />
+        />-->
+    <SurfaceView
+
+        android:id="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"/>
 
     <EditText
+        android:layout_below="@+id/surfaceview"
         android:hint="测试输入法弹出后camera "
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-</LinearLayout>
+</RelativeLayout>
