@@ -79,9 +79,9 @@
             android:label="@string/title_activity_float_window" >
         </activity>
         <activity android:name=".activity.TimerTaskActivity" />
-        <activity android:name=".activity.SurfaceViewTest"
-                  android:windowSoftInputMode="stateHidden"
-            />
+        <activity
+            android:name=".activity.SurfaceViewTest"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".DrawerAbout.DrawerLayoutActivity" />
         <activity android:name=".activity.TabHostFragmentTest" />
         <activity android:name=".bmobAbout.BomboActivity" />
@@ -105,6 +105,11 @@
         <activity
             android:name=".mvp.MvpActivity"
             android:label="@string/title_activity_mvp" >
+        </activity>
+        <activity
+            android:name=".activity.CustomViewActivity"
+            android:label="@string/title_activity_custom_view"
+            android:theme="@style/AppTheme" >
         </activity>
     </application>
 

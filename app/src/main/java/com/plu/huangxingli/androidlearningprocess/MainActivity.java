@@ -13,6 +13,7 @@ import com.plu.huangxingli.androidlearningprocess.FileAbout.FileActivity;
 import com.plu.huangxingli.androidlearningprocess.FloatWindow.FloatWindowActivity;
 import com.plu.huangxingli.androidlearningprocess.TimerAbout.TimerActivity;
 import com.plu.huangxingli.androidlearningprocess.ToastAbout.ToastActivity;
+import com.plu.huangxingli.androidlearningprocess.activity.CustomViewActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.FrameWorkTest;
 import com.plu.huangxingli.androidlearningprocess.activity.HandlerThreadActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.TabHostFragmentTest;
@@ -76,6 +77,7 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("fragmentTabHost　demo", TabHostFragmentTest.class);
         lessonMap.put("retrofit 测试使用", Main2Activity.class);
         lessonMap.put("测试MVP的简单使用", MvpActivity.class);
+        lessonMap.put("自定义view的简单使用", CustomViewActivity.class);
 
     }
 }
