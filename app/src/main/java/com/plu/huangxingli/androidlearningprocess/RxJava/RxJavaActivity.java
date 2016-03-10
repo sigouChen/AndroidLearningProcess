@@ -93,7 +93,15 @@ public class RxJavaActivity extends AppCompatActivity {
             }
         });*/
 
-        Observable.just(1, 2, 3, 4) // IO 线程，由 subscribeOn() 指定
+        Observable.create(new Observable.OnSubscribe<Integer>() {
+            @Override
+            public void call(Subscriber<? super Integer> subscriber) {
+                subscriber.onNext(3);
+                PluLogUtil.log(" --  onSubscribe call thread is "+Thread.currentThread().getName());
+
+            }
+        }) // IO 线程，由 subscribeOn() 指定
+                .subscribeOn(Schedulers.io())
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(Schedulers.io())
                 .map(new Func1<Integer, Integer>() {
@@ -143,10 +151,11 @@ public class RxJavaActivity extends AppCompatActivity {
         //暂且理解是：1.subscribeOn指的是被观察者运行的线程2.observeon是观察者运行的线程
         //需要注意的一点是map指令里面的代码所在的线程是　其前面的observeon所指定的线程（注意前面字眼）
         //map:１．如果map前面没有observeon且且页没有subscribeon则该map所在的线程为主线程，若只有subscribeon则是scribeon指定的线程
-        //map：２．若map前面有多个observeon定义所运行线程，则使用的是最后一个observeron定义的线程
-        //另外还需要注意的一点是　doOnSubscribe指令里面运行的代码所在的线程取决于其后面的
+        //map：２．若map前面有多个observeon定义所运行线程，则使用的是最后一个observeron定义的线程,并且取决于其前面定义的那个observeon里面定义的线程
+        //map:如果其后面也有obsereon定义的话，则取决于前面的那个定义，若前面有２个的话取决于最后定义的那个最近
+        //doOnSubscribe:另外还需要注意的一点是　doOnSubscribe指令里面运行的代码所在的线程取决于其后面的
         // 第一个subscribeOn里面指定的线程的名字，请注意第一字眼和其后面的字眼
-        //若指定了多个observeon，则subscribe的onNext里面运行的代码使用的线程是最后一个定义的subscribeon的线程,即最靠近sucriber的subscribeon里
+        //onNext:若指定了多个observeon，则subscribe的onNext里面运行的代码使用的线程是最后一个定义的subscribeon的线程,即最靠近sucriber的observeon里
         //面定义的线程
 
 
