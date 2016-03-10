@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.plu.huangxingli.androidlearningprocess.BaseActivity;
 import com.plu.huangxingli.androidlearningprocess.R;
 
 /**
@@ -18,7 +19,7 @@ public class TitleAdapter extends BaseAdapter {
     ArrayMap<String,Class> lessonMap;
     LayoutInflater inflater;
 
-    public TitleAdapter(ArrayMap<String, Class> lessonMap,Context context) {
+    public TitleAdapter(ArrayMap<String,Class> lessonMap,Context context) {
         this.lessonMap = lessonMap;
         inflater=LayoutInflater.from(context);
 

@@ -5,12 +5,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.plu.huangxingli.androidlearningprocess.BaseActivity;
 import com.plu.huangxingli.androidlearningprocess.R;
 import com.plu.huangxingli.androidlearningprocess.Utils.PluLogUtil;
 import com.plu.huangxingli.androidlearningprocess.view.CustomView;
 import com.plu.huangxingli.androidlearningprocess.view.TopLayout;
 
-public class ViewMeasureActivity extends AppCompatActivity {
+public class ViewMeasureActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

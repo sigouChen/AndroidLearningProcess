@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
+import com.plu.huangxingli.androidlearningprocess.BaseActivity;
 import com.plu.huangxingli.androidlearningprocess.R;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 /**
  * Created by lenovo on 2016/1/5.
  */
-public class DrawerLayoutActivity extends AppCompatActivity {
+public class DrawerLayoutActivity extends BaseActivity {
 
 
     ActionBarDrawerToggle mActionBarDrawerToggle;

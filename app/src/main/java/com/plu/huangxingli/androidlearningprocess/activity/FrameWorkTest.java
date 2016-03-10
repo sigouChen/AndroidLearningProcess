@@ -7,12 +7,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.plu.huangxingli.androidlearningprocess.BaseActivity;
 import com.plu.huangxingli.androidlearningprocess.R;
 import com.plu.huangxingli.androidlearningprocess.Utils.PluLogUtil;
 
 import com.plu.huangxingli.androidlearningprocess.componment.Location;
 
-public class FrameWorkTest extends AppCompatActivity {
+public class FrameWorkTest extends BaseActivity {
 
     boolean isHere=false;
     @Override

@@ -10,11 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.plu.huangxingli.androidlearningprocess.BaseActivity;
 import com.plu.huangxingli.androidlearningprocess.R;
 
 import java.util.ArrayList;
 
-public class MvpActivity extends AppCompatActivity implements ShowDataView{
+public class MvpActivity extends BaseActivity implements ShowDataView{
 
     ListView listView;
 

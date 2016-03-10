@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.plu.huangxingli.androidlearningprocess.BaseActivity;
 import com.plu.huangxingli.androidlearningprocess.R;
 import com.plu.huangxingli.androidlearningprocess.Utils.PluLogUtil;
 import com.plu.huangxingli.androidlearningprocess.fragment.TabHostFragment1;
@@ -18,7 +19,7 @@ import com.plu.huangxingli.androidlearningprocess.fragment.TabHostFragment1;
 /**
  * Created by lily on 16-2-2.
  */
-public class TabHostFragmentTest extends FragmentActivity {
+public class TabHostFragmentTest extends BaseActivity {
 
     Class[] tabs=new Class[]{TabHostFragment1.class,TabHostFragment1.class,TabHostFragment1.class};
     LayoutInflater inflater;

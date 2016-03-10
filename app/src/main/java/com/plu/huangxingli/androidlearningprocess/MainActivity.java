@@ -11,6 +11,7 @@ import com.plu.huangxingli.androidlearningprocess.AnimateAbout.AnimateActivity;
 import com.plu.huangxingli.androidlearningprocess.DrawerAbout.DrawerLayoutActivity;
 import com.plu.huangxingli.androidlearningprocess.FileAbout.FileActivity;
 import com.plu.huangxingli.androidlearningprocess.FloatWindow.FloatWindowActivity;
+import com.plu.huangxingli.androidlearningprocess.RxJava.RXCatogry;
 import com.plu.huangxingli.androidlearningprocess.RxJava.RxJavaActivity;
 import com.plu.huangxingli.androidlearningprocess.TimerAbout.TimerActivity;
 import com.plu.huangxingli.androidlearningprocess.ToastAbout.ToastActivity;
@@ -82,8 +83,10 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("测试MVP的简单使用", MvpActivity.class);
         lessonMap.put("测试自定义View使用", ViewMeasureActivity.class);
         lessonMap.put("测试事件拦截机制", TestTouchEvent.class);
-        lessonMap.put("RxJava使用",RxJavaActivity.class);
+        lessonMap.put("RxJava使用",RXCatogry.class);
         lessonMap.put("自定义view的简单使用", CustomViewActivity.class);
+
+
 
     }
 }

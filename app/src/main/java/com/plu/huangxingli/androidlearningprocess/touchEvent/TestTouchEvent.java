@@ -8,12 +8,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.plu.huangxingli.androidlearningprocess.BaseActivity;
 import com.plu.huangxingli.androidlearningprocess.R;
 import com.plu.huangxingli.androidlearningprocess.Utils.PluLogUtil;
 
 import java.io.BufferedReader;
 
-public class TestTouchEvent extends AppCompatActivity {
+public class TestTouchEvent extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

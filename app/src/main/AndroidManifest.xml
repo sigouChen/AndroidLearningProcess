@@ -79,6 +79,7 @@
             android:label="@string/title_activity_float_window" >
         </activity>
         <activity android:name=".activity.TimerTaskActivity" />
+        <activity android:name=".RxJava.RxCreateSignActivity" />
         <activity
             android:name=".activity.SurfaceViewTest"
             android:windowSoftInputMode="stateHidden" />
@@ -122,6 +123,10 @@
             android:name=".activity.CustomViewActivity"
             android:label="@string/title_activity_custom_view"
             android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".RxJava.RXCatogry"
+            android:label="@string/title_activity_rxcatogry" >
         </activity>
     </application>
 

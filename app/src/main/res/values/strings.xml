@@ -17,5 +17,6 @@
     <string name="title_activity_view_measure">ViewMeasureActivity</string>
     <string name="title_activity_test_touch_event">TestTouchEvent</string>
     <string name="title_activity_rx_java">RxJavaActivity</string>
+    <string name="title_activity_rxcatogry">RXCatogry</string>
 
 </resources>

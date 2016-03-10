@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
 
+import com.plu.huangxingli.androidlearningprocess.BaseActivity;
+
 /**
  * Created by lily on 16-1-5.
  */
-public class TimerActivity extends Activity{
+public class TimerActivity extends BaseActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
