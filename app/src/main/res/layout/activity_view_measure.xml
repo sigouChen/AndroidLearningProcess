@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                tools:context="com.plu.huangxingli.androidlearningprocess.activity.ViewMeasureActivity">
+
+   <com.plu.huangxingli.androidlearningprocess.view.TopLayout
+       android:background="@android:color/holo_green_dark"
+       android:id="@+id/toplayout"
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="450px">
+
+       <com.plu.huangxingli.androidlearningprocess.view.CustomView
+           android:text="i am customTextVIew"
+           android:id="@+id/customview"
+           android:alpha="0.5"
+           android:background="@android:color/holo_red_dark"
+           android:layout_width="600px"
+           android:layout_height="wrap_content"/>
+   </com.plu.huangxingli.androidlearningprocess.view.TopLayout>
+
+</RelativeLayout>

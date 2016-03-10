@@ -11,6 +11,7 @@ import com.plu.huangxingli.androidlearningprocess.AnimateAbout.AnimateActivity;
 import com.plu.huangxingli.androidlearningprocess.DrawerAbout.DrawerLayoutActivity;
 import com.plu.huangxingli.androidlearningprocess.FileAbout.FileActivity;
 import com.plu.huangxingli.androidlearningprocess.FloatWindow.FloatWindowActivity;
+import com.plu.huangxingli.androidlearningprocess.RxJava.RxJavaActivity;
 import com.plu.huangxingli.androidlearningprocess.TimerAbout.TimerActivity;
 import com.plu.huangxingli.androidlearningprocess.ToastAbout.ToastActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.CustomViewActivity;
@@ -22,12 +23,14 @@ import com.plu.huangxingli.androidlearningprocess.activity.TimerTaskActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.ValueAnimatorActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.SurfaceViewTest;
 import com.plu.huangxingli.androidlearningprocess.activity.TimerTextViewActivity;
+import com.plu.huangxingli.androidlearningprocess.activity.ViewMeasureActivity;
 import com.plu.huangxingli.androidlearningprocess.bmobAbout.BomboActivity;
 import com.plu.huangxingli.androidlearningprocess.fragment.TabHostFragment1;
 import com.plu.huangxingli.androidlearningprocess.mvp.MvpActivity;
 import com.plu.huangxingli.androidlearningprocess.retrofit.Main2Activity;
 import com.plu.huangxingli.androidlearningprocess.serviceAbout.ServiceActivity;
 import com.plu.huangxingli.androidlearningprocess.adapter.TitleAdapter;
+import com.plu.huangxingli.androidlearningprocess.touchEvent.TestTouchEvent;
 
 /**
  * Created by lily on 15-12-31.
@@ -77,6 +80,9 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("fragmentTabHost　demo", TabHostFragmentTest.class);
         lessonMap.put("retrofit 测试使用", Main2Activity.class);
         lessonMap.put("测试MVP的简单使用", MvpActivity.class);
+        lessonMap.put("测试自定义View使用", ViewMeasureActivity.class);
+        lessonMap.put("测试事件拦截机制", TestTouchEvent.class);
+        lessonMap.put("RxJava使用",RxJavaActivity.class);
         lessonMap.put("自定义view的简单使用", CustomViewActivity.class);
 
     }
