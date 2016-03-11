@@ -42,7 +42,7 @@ public class ArticleListActivity extends AppCompatActivity implements ArticleVie
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Replace dwith your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
