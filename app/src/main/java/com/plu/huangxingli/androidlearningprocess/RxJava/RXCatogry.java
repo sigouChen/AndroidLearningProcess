@@ -26,6 +26,7 @@ public class RXCatogry extends ListActivity {
         setContentView(R.layout.activity_rxcatogry);
         lessonMap=new ArrayMap<>();
         lessonMap.put("Rx创建操作符使用", RxCreateSignActivity.class);
+        lessonMap.put("RxJava线程相关",RxJavaActivity.class);
         TitleAdapter titleAdapter=new TitleAdapter(lessonMap,RXCatogry.this);
         setListAdapter(titleAdapter);
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {

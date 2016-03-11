@@ -16,25 +16,30 @@ import rx.functions.Func0;
  */
 public class RxCreateSignActivity extends BaseActivity {
 
-    private String name;
+    private String name="lily";
     private Observable<String> defObserveable;
     private Observable<String> justObserveable;
+    private Observable<String> comObservable;
+
     private Subscriber<String> subscriber;
-    private Observable observable;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        name = "lily";
-
         defObserveable = Observable.defer(new Func0<Observable<String>>() {
+           @Override
+           public Observable<String> call() {
+               return Observable.just(name);
+           }
+       });
+        justObserveable = Observable.just(name);
+        comObservable=Observable.create(new Observable.OnSubscribe<String>() {
             @Override
-            public Observable<String> call() {
-                return Observable.just(name);
+            public void call(Subscriber<? super String> subscriber) {
+                subscriber.onNext(name);
             }
         });
-        justObserveable = Observable.just(name);
-        name ="lucy";
         subscriber = new Subscriber<String>() {
             @Override
             public void onCompleted() {
@@ -51,39 +56,14 @@ public class RxCreateSignActivity extends BaseActivity {
                 PluLogUtil.log("---onNext name is " + s);
             }
         };
-
+        name ="lucy";
+        comObservable.subscribe(subscriber);
         defObserveable.subscribe(subscriber);
         justObserveable.subscribe(subscriber);
         //打印结果：
         //---_PLU LOG ---onNext name is lucy
+        //---_PLU LOG ---onNext name is lucy
         // ---_PLU LOG ---onNext name is lily
-        //2者的区别是Observable.def里面定义出来的Observable的参数能保持一直是传进去变量的最新值
-
-        //------------------------------------------------------------------------------
-        observable = Observable.timer(2, 2, TimeUnit.SECONDS);
-        observable.subscribe(new Subscriber<Long>() {
-            @Override
-            public void onCompleted() {
-                PluLogUtil.log("---onComplete");
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onNext(Long aLong) {
-                PluLogUtil.log("---onNext " + aLong);
-
-            }
-        });
-
-
-
-
-
-
 
     }
 

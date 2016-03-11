@@ -128,6 +128,11 @@
             android:name=".RxJava.RXCatogry"
             android:label="@string/title_activity_rxcatogry" >
         </activity>
+        <activity
+            android:name=".realMvp.view.ArticleListActivity"
+            android:label="@string/title_activity_article_list"
+            android:theme="@style/AppTheme" >
+        </activity>
     </application>
 
 </manifest>

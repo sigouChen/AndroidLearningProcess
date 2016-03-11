@@ -18,5 +18,6 @@
     <string name="title_activity_test_touch_event">TestTouchEvent</string>
     <string name="title_activity_rx_java">RxJavaActivity</string>
     <string name="title_activity_rxcatogry">RXCatogry</string>
+    <string name="title_activity_article_list">ArticleListActivity</string>
 
 </resources>
