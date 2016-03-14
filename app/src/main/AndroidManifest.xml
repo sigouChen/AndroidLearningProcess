@@ -132,6 +132,10 @@
             android:name=".RxJava.RetrofitWithRxJava"
             android:label="@string/title_activity_retrofit_with_rx_java" >
         </activity>
+        <activity
+            android:name=".RxJava.RxSignActivity"
+            android:label="@string/title_activity_rx_sign" >
+        </activity>
     </application>
 
 </manifest>
