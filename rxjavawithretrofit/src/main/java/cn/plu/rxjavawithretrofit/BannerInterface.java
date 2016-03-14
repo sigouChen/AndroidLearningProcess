@@ -1,10 +1,8 @@
-package com.plu.huangxingli.androidlearningprocess.retrofit;
+package cn.plu.rxjavawithretrofit;
 
 
-import com.plu.huangxingli.androidlearningprocess.RxJava.Banner;
-
-import retrofit2.Call;
-import retrofit2.http.GET;
+import retrofit.Call;
+import retrofit.http.GET;
 import rx.Observable;
 
 /**
