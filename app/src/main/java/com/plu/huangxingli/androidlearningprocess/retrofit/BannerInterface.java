@@ -14,5 +14,5 @@ public interface BannerInterface {
     @GET("api/home/banner")
     Call<String> getBanner();
     @GET("api/home/banner")
-    Observable<Banner> getBanner1();
+    Observable<String> getBanner1();
 }
