@@ -17,10 +17,11 @@ import com.plu.huangxingli.androidlearningprocess.R;
 import com.plu.huangxingli.androidlearningprocess.realMvp.bean.Article;
 import com.plu.huangxingli.androidlearningprocess.realMvp.interfaces.ArticleViewInterface;
 import com.plu.huangxingli.androidlearningprocess.realMvp.presenter.ArticlePrensenter;
+import com.plu.huangxingli.androidlearningprocess.realMvp.presenter.BasePresenter;
 
 import java.util.List;
 
-public class ArticleListActivity extends AppCompatActivity implements ArticleViewInterface{
+public class ArticleListActivity extends BaseMVPActiviy<ArticleViewInterface,ArticlePrensenter> implements ArticleViewInterface{
 
     private ListView listView;
     private LayoutInflater inflater;
@@ -35,9 +36,8 @@ public class ArticleListActivity extends AppCompatActivity implements ArticleVie
         inflater = LayoutInflater.from(ArticleListActivity.this);
 
         listView = (ListView) findViewById(R.id.listview);
-        ArticlePrensenter articlePrensenter=new ArticlePrensenter(this);
         progressBar = (ProgressBar) findViewById(R.id.progress);
-        articlePrensenter.fetchArticle();
+        mPresenter.fetchArticle();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +47,12 @@ public class ArticleListActivity extends AppCompatActivity implements ArticleVie
             }
         });
     }
+
+    @Override
+    public ArticlePrensenter createPresenter() {
+        return new ArticlePrensenter();
+    }
+
 
     @Override
     public void showArticle(final List<Article> articles) {

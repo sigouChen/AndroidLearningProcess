@@ -62,7 +62,7 @@
             android:name=".serviceAbout.ServiceActivity$SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
-        <activity android:name=".SecondActivity"/>
+        <activity android:name=".SecondActivity" />
         <activity android:name=".activity.HandlerThreadActivity" />
         <activity android:name=".TimerAbout.TimerActivity" />
         <activity
@@ -75,6 +75,7 @@
             android:label="@string/title_activity_base" >
         </activity>
         <activity android:name=".activity.ValueAnimatorActivity" />
+        <activity android:name=".realMvp.view.ArticleListActivity"/>
         <activity
             android:name=".FloatWindow.FloatWindowActivity"
             android:label="@string/title_activity_float_window" >
