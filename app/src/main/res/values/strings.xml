@@ -20,5 +20,6 @@
     <string name="title_activity_rxcatogry">RXCatogry</string>
     <string name="title_activity_retrofit_with_rx_java">RetrofitWithRxJava</string>
     <string name="title_activity_rx_sign">RxSignActivity</string>
+    <string name="title_activity_on_activity_result">OnActivityResultAc</string>
 
 </resources>

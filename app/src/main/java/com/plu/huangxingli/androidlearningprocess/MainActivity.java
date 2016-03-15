@@ -86,6 +86,7 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("测试事件拦截机制", TestTouchEvent.class);
         lessonMap.put("RxJava使用",RXCatogry.class);
         lessonMap.put("自定义view的简单使用", CustomViewActivity.class);
+        lessonMap.put("Activity的跳转处理",SecondActivity.class);
 
 
 

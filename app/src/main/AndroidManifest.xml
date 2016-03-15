@@ -62,6 +62,7 @@
             android:name=".serviceAbout.ServiceActivity$SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
+        <activity android:name=".SecondActivity"/>
         <activity android:name=".activity.HandlerThreadActivity" />
         <activity android:name=".TimerAbout.TimerActivity" />
         <activity
@@ -135,6 +136,10 @@
         <activity
             android:name=".RxJava.RxSignActivity"
             android:label="@string/title_activity_rx_sign" >
+        </activity>
+        <activity
+            android:name=".activity.OnActivityResultAc"
+            android:label="@string/title_activity_on_activity_result" >
         </activity>
     </application>
 
