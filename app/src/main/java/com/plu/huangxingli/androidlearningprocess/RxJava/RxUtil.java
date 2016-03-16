@@ -7,11 +7,10 @@ import rx.Subscription;
  */
 public class RxUtil {
 
-    public static void unSubscribe(Subscription... subscriptions){
-        if (subscriptions!=null&&subscriptions.length!=0){
-            for (Subscription subscription:subscriptions){
-                subscription.unsubscribe();
-            }
-        }
+    public static void unSubscribe(Subscription subscription){
+
+               if (subscription!=null) {
+                    subscription.unsubscribe();
+                }
     }
 }

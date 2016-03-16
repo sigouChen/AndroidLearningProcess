@@ -18,43 +18,43 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.functions.Func2;
+import rx.subscriptions.CompositeSubscription;
 
 public class RxSignActivity extends AppCompatActivity {
 
-    private Subscription mTimerSubscription;
-    private Subscription mIntervalSubscription;
-    private Subscription mRangeSubscription;
-    private Subscription mReaptSubscription;
-    private Subscription mReaptWhenSubscription;
+
+    private CompositeSubscription mCompositeSubscription; //用来管理订阅者的一个类，不用单个取消订阅
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_sign);
-        mTimerSubscription = Observable.timer(2, 2, TimeUnit.SECONDS, AndroidSchedulers.mainThread()).subscribe(new Action1<Long>() {
+        mCompositeSubscription=new CompositeSubscription();
+        mCompositeSubscription.add(Observable.timer(2, 2, TimeUnit.SECONDS, AndroidSchedulers.mainThread()).subscribe(new Action1<Long>() {
             @Override
             public void call(Long aLong) {
                 PluLogUtil.log("--- subscribe action thread is " + Thread.currentThread().getName()+"value is "+aLong);
             }
-        });
-        mIntervalSubscription=Observable.interval(1, 2, TimeUnit.SECONDS, AndroidSchedulers.mainThread()).subscribe(new Action1<Long>() {
+        }));
+        mCompositeSubscription.add(Observable.interval(1, 2, TimeUnit.SECONDS, AndroidSchedulers.mainThread()).subscribe(new Action1<Long>() {
             @Override
             public void call(Long aLong) {
                 PluLogUtil.log("--interval call value is "+aLong);
             }
-        });
-        mRangeSubscription=Observable.range(3, 10, AndroidSchedulers.mainThread()).subscribe(new Action1<Integer>() {
+        }));
+        mCompositeSubscription.add(Observable.range(3, 10, AndroidSchedulers.mainThread()).subscribe(new Action1<Integer>() {
             @Override
             public void call(Integer integer) {
                 PluLogUtil.log("----range call value is "+integer);
             }
-        });
-        mReaptSubscription=Observable.range(3,5).repeat(2, AndroidSchedulers.mainThread()).subscribe(new Action1<Integer>() {
+        }));
+        mCompositeSubscription.add(Observable.range(3,5).repeat(2, AndroidSchedulers.mainThread()).subscribe(new Action1<Integer>() {
             @Override
             public void call(Integer integer) {
                 PluLogUtil.log("---repeatSubs call value is " + integer + " thread is " + Thread.currentThread().getName());
             }
-        });
+        }));
         /*mReaptWhenSubscription=Observable.range(3,3).repeatWhen(new Func1<Observable<? extends Void>, Observable<?>>() {
             @Override
             public Observable<?> call(Observable<? extends Void> observable) {
@@ -85,7 +85,7 @@ public class RxSignActivity extends AppCompatActivity {
                 System.err.println("Next:" + value);
             }
         });*/
-        mReaptWhenSubscription=Observable.just(1,2,3).repeatWhen(new Func1<Observable<? extends Void>, Observable<?>>() {
+        mCompositeSubscription.add(Observable.just(1,2,3).repeatWhen(new Func1<Observable<? extends Void>, Observable<?>>() {
             @Override
             public Observable<?> call(Observable<? extends Void> observable) {
                 //重复3次
@@ -121,7 +121,7 @@ public class RxSignActivity extends AppCompatActivity {
                 Log.v("REPWHEN","---SUBSCRIBER ONNEXT VALUE IS "+value);
                 System.out.println("Next:" + value);
             }
-        });
+        }));
     }
 
     @Override
@@ -149,6 +149,6 @@ public class RxSignActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        RxUtil.unSubscribe(mTimerSubscription,mIntervalSubscription,mRangeSubscription,mReaptSubscription,mReaptWhenSubscription);
+        RxUtil.unSubscribe(mCompositeSubscription);
     }
 }
