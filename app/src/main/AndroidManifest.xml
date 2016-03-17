@@ -81,7 +81,7 @@
             android:label="@string/title_activity_float_window" >
         </activity>
         <activity android:name=".activity.TimerTaskActivity" />
-        <activity android:name=".RxJava.RxCreateSignActivity" />
+        <activity android:name=".RxJava.operators.RxCreateSignActivity" />
         <activity
             android:name=".activity.SurfaceViewTest"
             android:windowSoftInputMode="stateHidden" />
@@ -143,9 +143,45 @@
             android:label="@string/title_activity_on_activity_result" >
         </activity>
         <activity
-            android:name=".RxJava.ChangeSignActivity"
+            android:name=".RxJava.operators.ChangeSignActivity"
             android:label="@string/title_activity_change_sign"
             android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".RxJava.OperatorList"
+            android:label="@string/title_activity_operator_list" >
+        </activity>
+        <activity
+            android:name=".RxJava.operators.FilterOperators"
+            android:label="@string/title_activity_filter_operators" >
+        </activity>
+        <activity
+            android:name=".RxJava.operators.CombineOperators"
+            android:label="@string/title_activity_combine_operators" >
+        </activity>
+        <activity
+            android:name=".RxJava.operators.ErrorHandlerOperators"
+            android:label="@string/title_activity_error_handler_operators" >
+        </activity>
+        <activity
+            android:name=".RxJava.operators.AssistOperators"
+            android:label="@string/title_activity_assist_operators" >
+        </activity>
+        <activity
+            android:name=".RxJava.operators.ConditionAndBooleanOperators"
+            android:label="@string/title_activity_condition_and_boolean_operators" >
+        </activity>
+        <activity
+            android:name=".RxJava.operators.MathematicalAndAggregateOperators"
+            android:label="@string/title_activity_mathematical_and_aggregate_operators" >
+        </activity>
+        <activity
+            android:name=".RxJava.operators.AsyOperators"
+            android:label="@string/title_activity_asy_operators" >
+        </activity>
+        <activity
+            android:name=".RxJava.operators.ConnectionOperators"
+            android:label="@string/title_activity_connection_operators" >
         </activity>
     </application>
 

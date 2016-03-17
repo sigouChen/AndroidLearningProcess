@@ -2,20 +2,17 @@ package com.plu.huangxingli.androidlearningprocess.RxJava;
 
 import android.app.ListActivity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.ArrayMap;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 
-import com.plu.huangxingli.androidlearningprocess.BaseActivity;
 import com.plu.huangxingli.androidlearningprocess.R;
+import com.plu.huangxingli.androidlearningprocess.RxJava.operators.ChangeSignActivity;
+import com.plu.huangxingli.androidlearningprocess.RxJava.operators.RxCreateSignActivity;
 import com.plu.huangxingli.androidlearningprocess.adapter.TitleAdapter;
-
-import java.util.Collection;
 
 public class RXCatogry extends ListActivity {
     ArrayMap<String,Class> lessonMap;
@@ -25,11 +22,11 @@ public class RXCatogry extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rxcatogry);
         lessonMap=new ArrayMap<>();
-        lessonMap.put("Rx创建操作符使用", RxCreateSignActivity.class);
+        lessonMap.put("Rx操作符使用", OperatorList.class);
         lessonMap.put("RxJava线程相关",RxJavaActivity.class);
         lessonMap.put("RxJava与Retrofit配合使用",RetrofitWithRxJava.class);
-        lessonMap.put("RxJava操作符的使用",RxSignActivity.class);
-        lessonMap.put("变换操作符",ChangeSignActivity.class);
+       // lessonMap.put("RxJava操作符的使用",RxSignActivity.class);
+       // lessonMap.put("变换操作符",ChangeSignActivity.class);
         TitleAdapter titleAdapter=new TitleAdapter(lessonMap,RXCatogry.this);
         setListAdapter(titleAdapter);
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {

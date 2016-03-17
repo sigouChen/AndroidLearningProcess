@@ -23,5 +23,17 @@
     <string name="title_activity_on_activity_result">OnActivityResultAc</string>
     <string name="title_activity_article">ArticleActivity</string>
     <string name="title_activity_change_sign">ChangeSignActivity</string>
+    <string name="title_activity_operator_list">OperatorList</string>
+    <string name="title_activity_filter_operators">FilterOperators</string>
+    <string name="title_activity_combine_operators">CombineOperators</string>
+    <string name="title_activity_error_handler_operators">ErrorHandlerOperators</string>
+    <string name="title_activity_assist_operators">AssistOperators</string>
+    <string name="title_activity_condition_and_boolean_operators">ConditionAndBooleanOperators
+    </string>
+    <string name="title_activity_mathematical_and_aggregate_operators">
+        MathematicalAndAggregateOperators
+    </string>
+    <string name="title_activity_asy_operators">AsyOperators</string>
+    <string name="title_activity_connection_operators">ConnectionOperators</string>
 
 </resources>

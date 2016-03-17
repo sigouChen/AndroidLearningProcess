@@ -12,13 +12,13 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btnBuffer"
-            android:text="buffer"
+            android:id="@+id/btnCreate"
+            android:text="create"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
-            android:id="@+id/btnflatMap"
-            android:text="flatMap"
+            android:id="@+id/btnJust"
+            android:text="just"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
@@ -27,23 +27,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
-            android:id="@+id/btnGroupBy"
-            android:text="groupBy"
+            android:id="@+id/btnFrom"
+            android:text="from"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
-            android:id="@+id/btnMap"
-            android:text="map"
+            android:id="@+id/btnTimer"
+            android:text="timer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
-            android:id="@+id/btnScan"
-            android:text="scan"
+            android:id="@+id/btnInterval"
+            android:text="interval"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
-            android:id="@+id/btnWindow"
-            android:text="window"
+            android:id="@+id/btnRange"
+            android:text="range"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
