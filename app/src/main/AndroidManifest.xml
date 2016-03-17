@@ -75,7 +75,7 @@
             android:label="@string/title_activity_base" >
         </activity>
         <activity android:name=".activity.ValueAnimatorActivity" />
-        <activity android:name=".realMvp.view.ArticleListActivity"/>
+        <activity android:name=".realMvp.view.ArticleListActivity" />
         <activity
             android:name=".FloatWindow.FloatWindowActivity"
             android:label="@string/title_activity_float_window" >
@@ -141,6 +141,11 @@
         <activity
             android:name=".activity.OnActivityResultAc"
             android:label="@string/title_activity_on_activity_result" >
+        </activity>
+        <activity
+            android:name=".RxJava.ChangeSignActivity"
+            android:label="@string/title_activity_change_sign"
+            android:theme="@style/AppTheme" >
         </activity>
     </application>
 

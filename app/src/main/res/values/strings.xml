@@ -22,5 +22,6 @@
     <string name="title_activity_rx_sign">RxSignActivity</string>
     <string name="title_activity_on_activity_result">OnActivityResultAc</string>
     <string name="title_activity_article">ArticleActivity</string>
+    <string name="title_activity_change_sign">ChangeSignActivity</string>
 
 </resources>

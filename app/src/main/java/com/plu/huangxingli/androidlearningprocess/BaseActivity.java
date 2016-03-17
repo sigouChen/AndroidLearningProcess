@@ -19,9 +19,9 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-    public View findView(int resId){
+    public <T extends View> T findView(int resId){
 
-        return findViewById(resId);
+        return (T)findViewById(resId);
     }
 
 
