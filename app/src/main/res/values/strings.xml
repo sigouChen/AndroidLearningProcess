@@ -36,5 +36,7 @@
     <string name="title_activity_asy_operators">AsyOperators</string>
     <string name="title_activity_connection_operators">ConnectionOperators</string>
     <string name="title_activity_rx_binding_activity_using">RxBindingActivityUsing</string>
+    <string name="title_activity_test_activity_task">TestActivityTask</string>
+    <string name="title_activity_gift_animation">GiftAnimationActivity</string>
 
 </resources>

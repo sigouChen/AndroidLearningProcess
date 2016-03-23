@@ -41,7 +41,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -59,10 +60,14 @@
         <activity android:name=".activity.TimerTextViewActivity" />
         <activity android:name=".AnimateAbout.AnimateActivity" />
         <activity
-            android:name=".serviceAbout.ServiceActivity$SecondActivity"
+            android:name=".serviceAbout.ServiceActivity$InnerActivity"
             android:label="@string/title_activity_second" >
         </activity>
-        <activity android:name=".SecondActivity" />
+        <activity android:name=".SecondActivity" >
+            <intent-filter>
+                <action android:name="com.google.app.myapp.plu" />
+            </intent-filter>
+        </activity>
         <activity android:name=".activity.HandlerThreadActivity" />
         <activity android:name=".TimerAbout.TimerActivity" />
         <activity
@@ -182,6 +187,15 @@
         <activity
             android:name=".RxJava.operators.ConnectionOperators"
             android:label="@string/title_activity_connection_operators" >
+        </activity>
+        <activity
+            android:name=".activity.TestActivityTask"
+            android:label="@string/title_activity_test_activity_task"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".AnimateAbout.GiftAnimationActivity"
+            android:label="@string/title_activity_gift_animation" >
         </activity>
         <activity
             android:name=".RxBindingUsing.RxBindingActivityUsing"

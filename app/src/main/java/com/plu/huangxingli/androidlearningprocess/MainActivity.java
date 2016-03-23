@@ -5,9 +5,11 @@ import android.support.v4.app.FragmentActivity;
 import android.util.ArrayMap;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.plu.huangxingli.androidlearningprocess.AnimateAbout.AnimateActivity;
+import com.plu.huangxingli.androidlearningprocess.AnimateAbout.GiftAnimationActivity;
 import com.plu.huangxingli.androidlearningprocess.DrawerAbout.DrawerLayoutActivity;
 import com.plu.huangxingli.androidlearningprocess.FileAbout.FileActivity;
 import com.plu.huangxingli.androidlearningprocess.FloatWindow.FloatWindowActivity;
@@ -19,6 +21,7 @@ import com.plu.huangxingli.androidlearningprocess.activity.CustomViewActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.FrameWorkTest;
 import com.plu.huangxingli.androidlearningprocess.activity.HandlerThreadActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.TabHostFragmentTest;
+import com.plu.huangxingli.androidlearningprocess.activity.TestActivityTask;
 import com.plu.huangxingli.androidlearningprocess.activity.TestInnerClass;
 import com.plu.huangxingli.androidlearningprocess.activity.TimerTaskActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.ValueAnimatorActivity;
@@ -48,6 +51,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initLessonTitle();
+
 
         ListView listView= (ListView) findView(R.id.listview);
 
@@ -87,6 +91,9 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("RxJava使用",RXCatogry.class);
         lessonMap.put("自定义view的简单使用", CustomViewActivity.class);
         lessonMap.put("Activity的跳转处理",SecondActivity.class);
+        lessonMap.put("Activity启动模式测试", TestActivityTask.class);
+        lessonMap.put("动画测试",GiftAnimationActivity.class);
+
 
 
 

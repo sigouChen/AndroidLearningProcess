@@ -38,7 +38,7 @@ public class ServiceActivity extends BaseActivity {
         jumpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  Intent intent=new Intent(ServiceActivity.this,SecondActivity.class);
+              //  Intent intent=new Intent(ServiceActivity.this,InnerActivity.class);
                // startActivity(intent);
                 //ServiceActivity.this.finish();
                 android.os.Process.killProcess(android.os.Process.myPid());
@@ -168,7 +168,7 @@ public class ServiceActivity extends BaseActivity {
     }
 
 
-    public static class SecondActivity extends ActionBarActivity {
+    public static class InnerActivity extends ActionBarActivity {
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {

@@ -30,8 +30,7 @@ public class ChangeSignActivity extends BaseActivity {
     Button btnBuffer;
     @Bind(R.id.btnflatMap)
     Button btnflatMap;
-    @Bind(R.id.btnDefer)
-    Button btnDefer;
+
     @Bind(R.id.btnGroupBy)
     Button btnGroupBy;
     @Bind(R.id.btnMap)
@@ -63,6 +62,7 @@ public class ChangeSignActivity extends BaseActivity {
     private Subscriber scanSubscriber;
     private Observable<Observable<String>> windowObservable;
     private Subscriber windowSubscriber;
+    private Subscriber<String> stringSubscriber;
 
     @OnClick(R.id.btnBuffer) void bufferOp(){
 
@@ -72,7 +72,7 @@ public class ChangeSignActivity extends BaseActivity {
     }
     @OnClick(R.id.btnflatMap) void flatMapOp(){
         changeSignList.clear();
-        flatMapObservable.subscribe(bufferSubscribe);
+        flatMapObservable.subscribe(stringSubscriber);
     }
     @OnLongClick(R.id.btnBuffer) boolean bufferOp1(){
         changeSignList.clear();
@@ -116,6 +116,23 @@ public class ChangeSignActivity extends BaseActivity {
         createBooleanSubscriber();
         createScanObservable();
         createScanSubscriber();
+        stringSubscriber = new Subscriber<String>() {
+            @Override
+            public void onCompleted() {
+                PluLogUtil.log("----string subscriber onCompleted");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                PluLogUtil.log("----string subscriber onError is "+e.getMessage());
+            }
+
+            @Override
+            public void onNext(String s) {
+                PluLogUtil.log("-- string subscriber onNext is "+s);
+
+            }
+        };
         //Observable<Observable<String>> windowObservable=
         windowObservable = Observable.just("a", "b", "c", "d", "e", "f").window(2);//Window和Buffer类似，但不是发射来自原始Observable的数据包，
         createWindowSubscriber();
@@ -245,7 +262,7 @@ public class ChangeSignActivity extends BaseActivity {
     }
 
     private void createFlatMapObservable() {
-        flatMapObservable = Observable.just("lily").flatMap(new Func1<String, Observable<String>>() {
+        flatMapObservable = Observable.just("lily","lucy").flatMap(new Func1<String, Observable<String>>() {
             @Override
             public Observable<String> call(String s) {
                 return Observable.just(s+" is a good girl");
