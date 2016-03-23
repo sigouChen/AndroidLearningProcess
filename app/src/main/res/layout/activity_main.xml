@@ -4,8 +4,15 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <Button
+        android:visibility="gone"
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <ListView
         android:id="@+id/listview"
+
         android:cacheColorHint="#88888888"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

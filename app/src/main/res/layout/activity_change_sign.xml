@@ -22,11 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
-            android:id="@+id/btnDefer"
-            android:text="defer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <Button
             android:id="@+id/btnGroupBy"
             android:text="groupBy"
             android:layout_width="match_parent"
