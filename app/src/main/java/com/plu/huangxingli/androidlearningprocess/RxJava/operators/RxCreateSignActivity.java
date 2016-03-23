@@ -84,6 +84,7 @@ public class RxCreateSignActivity extends BaseActivity {
         defObserveable.subscribe(stringSubscriber);
     }
     @OnClick(R.id.btnFrom) void fromOp(){
+        PluLogUtil.log("--from operation ");
         showList.clear();
         fromObservable.subscribe(stringSubscriber);
     }
@@ -138,6 +139,8 @@ public class RxCreateSignActivity extends BaseActivity {
         mCompsiteSubscription.add(longSubscriber);
         mCompsiteSubscription.add(stringSubscriber);
         mCompsiteSubscription.add(integerSubscriber);
+
+
 
 
 

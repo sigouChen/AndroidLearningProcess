@@ -183,6 +183,11 @@
             android:name=".RxJava.operators.ConnectionOperators"
             android:label="@string/title_activity_connection_operators" >
         </activity>
+        <activity
+            android:name=".RxBindingUsing.RxBindingActivityUsing"
+            android:label="@string/title_activity_rx_binding_activity_using"
+            android:theme="@style/AppTheme" >
+        </activity>
     </application>
 
 </manifest>

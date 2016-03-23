@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.plu.huangxingli.androidlearningprocess.R;
+import com.plu.huangxingli.androidlearningprocess.RxBindingUsing.RxBindingActivityUsing;
 import com.plu.huangxingli.androidlearningprocess.RxJava.operators.ChangeSignActivity;
 import com.plu.huangxingli.androidlearningprocess.RxJava.operators.RxCreateSignActivity;
 import com.plu.huangxingli.androidlearningprocess.adapter.TitleAdapter;
@@ -25,6 +26,7 @@ public class RXCatogry extends ListActivity {
         lessonMap.put("Rx操作符使用", OperatorList.class);
         lessonMap.put("RxJava线程相关",RxJavaActivity.class);
         lessonMap.put("RxJava与Retrofit配合使用",RetrofitWithRxJava.class);
+        lessonMap.put("RxBinding和RxJava一起使用", RxBindingActivityUsing.class);
        // lessonMap.put("RxJava操作符的使用",RxSignActivity.class);
        // lessonMap.put("变换操作符",ChangeSignActivity.class);
         TitleAdapter titleAdapter=new TitleAdapter(lessonMap,RXCatogry.this);
