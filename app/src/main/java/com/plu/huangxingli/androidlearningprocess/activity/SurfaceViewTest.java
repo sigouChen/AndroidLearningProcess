@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.Display;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
@@ -20,7 +22,8 @@ import java.io.IOException;
 /**
  * Created by lily on 16-1-11.
  */
-public class SurfaceViewTest extends BaseActivity implements SurfaceHolder.Callback{
+public class SurfaceViewTest extends BaseActivity {
+      //  implements SurfaceHolder.Callback{
 
 
 
@@ -34,14 +37,15 @@ public class SurfaceViewTest extends BaseActivity implements SurfaceHolder.Callb
       //  LinearLayout linearLayout= (LinearLayout) findViewById(R.id.container);
 
         SurfaceView surfacView= (SurfaceView) findViewById(R.id.surfaceview);
-
+        EditText editTextView=findView(R.id.edittext);
+        editTextView.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
         surfaceHolder = surfacView.getHolder();
         Display display=getWindowManager().getDefaultDisplay();
         Point point=new Point();
         display.getSize(point);
         //要想要预览不变形，要做到２点，一是manifest的ａｃｔｉｖｉｔｙ设置|adjustResize，另一个要surfaceHolder.setFixSize要设置，这样才不会变形
         surfaceHolder.setFixedSize(point.x,600);
-        surfaceHolder.addCallback(this);
+      //  surfaceHolder.addCallback(this);
        // camera=Camera.open();
        /* FrameLayout frameLayout= (FrameLayout) findView(R.id.camera_preview);
         CameraPreview cameraPreview=new CameraPreview(this,camera);
@@ -68,11 +72,11 @@ public class SurfaceViewTest extends BaseActivity implements SurfaceHolder.Callb
     protected void onDestroy() {
         super.onDestroy();
 
-        camera.release();
-        camera=null;
+     //   camera.release();
+       // camera=null;
     }
 
-    @Override
+   /* @Override
     public void surfaceCreated(SurfaceHolder holder) {
         camera=getCameraInstance();
 
@@ -96,5 +100,5 @@ public class SurfaceViewTest extends BaseActivity implements SurfaceHolder.Callb
     public void surfaceDestroyed(SurfaceHolder holder) {
 
 
-    }
+    }*/
 }

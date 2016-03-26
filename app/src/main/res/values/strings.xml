@@ -38,5 +38,8 @@
     <string name="title_activity_rx_binding_activity_using">RxBindingActivityUsing</string>
     <string name="title_activity_test_activity_task">TestActivityTask</string>
     <string name="title_activity_gift_animation">GiftAnimationActivity</string>
+    <string name="title_activity_image">ImageActivity</string>
+    <string name="title_activity_manimate_test">MAnimateTest</string>
+    <string name="title_activity_popup_animate">PopupAnimateActivity</string>
 
 </resources>

@@ -40,5 +40,9 @@
 
     <color name="grey">#A4A4A4</color>
 
+    <color name="border_text">#FFFF00</color>
+
+    <color name="color_gift">#3ADF00</color>
+
 
 </resources>

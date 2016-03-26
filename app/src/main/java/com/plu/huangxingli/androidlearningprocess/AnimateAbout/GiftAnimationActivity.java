@@ -1,6 +1,7 @@
 package com.plu.huangxingli.androidlearningprocess.AnimateAbout;
 
 import android.animation.Animator;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.TranslateAnimation;
@@ -54,7 +56,7 @@ public class GiftAnimationActivity extends AppCompatActivity {
             }
         });
 
-        myHandler.sendEmptyMessageDelayed(0,3000);
+        myHandler.sendEmptyMessageDelayed(0,1000);
 
 
     }
@@ -79,9 +81,9 @@ public class GiftAnimationActivity extends AppCompatActivity {
     private void handleGifMsg(){
         PluLogUtil.log("0----handleGifMsg");
 
-        TranslateAnimation translateAnimation=new TranslateAnimation(-giftWidth,0,0,0);
+        final TranslateAnimation translateAnimation=new TranslateAnimation(-giftWidth,0,0,0);
 
-        translateAnimation.setDuration(3000);
+        translateAnimation.setDuration(1500);
         translateAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -90,6 +92,13 @@ public class GiftAnimationActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
+                AnimatorSet animatorSet=new AnimatorSet();
+                ObjectAnimator transalteAnimator=ObjectAnimator.ofFloat(layoutGift,"y",layoutGift.getY(),layoutGift.getY()-300);
+                ObjectAnimator alphaAnimator=ObjectAnimator.ofFloat(layoutGift,"alpha",1.f,0f);
+                animatorSet.play(transalteAnimator).with(alphaAnimator);
+                animatorSet.setDuration(2000);
+              //  layoutGift.startAnimation(translateAnimation1);
+                animatorSet.start();
 
             }
 

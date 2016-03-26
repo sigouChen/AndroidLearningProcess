@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.plu.huangxingli.androidlearningprocess.activity.MAnimateTest">
+
+
+
+    <com.plu.huangxingli.androidlearningprocess.view.CommonGifView
+        android:layout_marginTop="60dp"
+        android:id="@+id/giftView"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <com.plu.huangxingli.androidlearningprocess.view.CommonGifView
+        android:id="@+id/giftview2"
+        android:visibility="invisible"
+        android:layout_below="@+id/giftView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <Button
+        android:layout_alignParentTop="true"
+        android:id="@+id/button"
+        android:text="to start anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:layout_below="@+id/button"
+        android:id="@+id/animImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

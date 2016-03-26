@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/xlimg1" android:duration="50" />
+    <item android:drawable="@drawable/xlimg2" android:duration="50" />
+    <item android:drawable="@drawable/xlimg3" android:duration="50" />
+    <item android:drawable="@drawable/xlimg4" android:duration="50" />
+    <item android:drawable="@drawable/xlimg5" android:duration="50" />
+    <item android:drawable="@drawable/xlimg6" android:duration="50" />
+    <item android:drawable="@drawable/xlimg7" android:duration="50" />
+    <item android:drawable="@drawable/xlimg8" android:duration="50" />
+    <item android:drawable="@drawable/xlimg9" android:duration="50" />
+    <item android:drawable="@drawable/xlimg10" android:duration="50" />
+    <item android:drawable="@drawable/xlimg11" android:duration="50" />
+    <item android:drawable="@drawable/xlimg12" android:duration="50" />
+    <item android:drawable="@drawable/xlimg13" android:duration="50" />
+    <item android:drawable="@drawable/xlimg14" android:duration="50" />
+    <item android:drawable="@drawable/xlimg15" android:duration="50" />
+    <item android:drawable="@drawable/xlimg16" android:duration="50" />
+    <item android:drawable="@drawable/xlimg17" android:duration="50" />
+    <item android:drawable="@drawable/xlimg18" android:duration="50" />
+    <item android:drawable="@drawable/xlimg19" android:duration="50" />
+    <item android:drawable="@drawable/xlimg20" android:duration="50" />
+    <item android:drawable="@drawable/xlimg21" android:duration="50" />
+    <item android:drawable="@drawable/xlimg22" android:duration="50" />
+    <item android:drawable="@drawable/xlimg23" android:duration="50" />
+    <item android:drawable="@drawable/xlimg24" android:duration="50" />
+    <item android:drawable="@drawable/xlimg25" android:duration="50" />
+    <item android:drawable="@drawable/xlimg26" android:duration="50" />
+    <item android:drawable="@drawable/xlimg27" android:duration="50" />
+    <item android:drawable="@drawable/xlimg28" android:duration="50" />
+    <item android:drawable="@drawable/xlimg29" android:duration="50" />
+    <item android:drawable="@drawable/xlimg30" android:duration="50" />
+    <item android:drawable="@drawable/xlimg31" android:duration="50" />
+    <item android:drawable="@drawable/xlimg32" android:duration="50" />
+    <item android:drawable="@drawable/xlimg33" android:duration="50" />
+    <item android:drawable="@drawable/xlimg34" android:duration="50" />
+    <item android:drawable="@drawable/xlimg35" android:duration="50" />
+    <item android:drawable="@drawable/xlimg36" android:duration="50" />
+
+
+
+
+</animation-list>

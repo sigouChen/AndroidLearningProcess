@@ -1,11 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:layout_height="50dp"
+
+
+       android:visibility="invisible"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 tools:context="com.plu.huangxingli.androidlearningprocess.AnimateAbout.GiftAnimationActivity">
 
     <RelativeLayout
@@ -13,7 +13,7 @@
         android:id="@+id/layout_gift"
         android:background="@color/grey"
         android:alpha="0.5"
-        android:visibility="invisible"
+
         android:layout_width="250dp"
         android:layout_height="50dp">
         <TextView
@@ -27,18 +27,29 @@
         <ImageView
             android:layout_toRightOf="@+id/tvContent"
             android:src="@drawable/chat_item_gift_stick"
-            android:id="@+id/image"
-            android:layout_alignParentRight="true"
+            android:id="@+id/imageGift"
+            android:visibility="invisible"
+
+            android:layout_toLeftOf="@+id/tv_gift_count"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
 
+
+        <com.plu.huangxingli.androidlearningprocess.view.StrokeTextView
+            app:stroke_text_color="@color/border_text"
+            app:stroke_text_stroke_width="3dp"
+            android:textSize="30dp"
+            android:textColor="@color/color_gift"
+            android:id="@+id/tv_gift_count"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
     </RelativeLayout>
 
-    <ListView
-        android:id="@+id/listview"
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
-</RelativeLayout>
+
+
+</merge>

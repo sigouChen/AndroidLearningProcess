@@ -20,6 +20,9 @@ import com.plu.huangxingli.androidlearningprocess.ToastAbout.ToastActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.CustomViewActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.FrameWorkTest;
 import com.plu.huangxingli.androidlearningprocess.activity.HandlerThreadActivity;
+import com.plu.huangxingli.androidlearningprocess.activity.ImageActivity;
+import com.plu.huangxingli.androidlearningprocess.activity.MAnimateTest;
+import com.plu.huangxingli.androidlearningprocess.activity.PopupAnimateActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.TabHostFragmentTest;
 import com.plu.huangxingli.androidlearningprocess.activity.TestActivityTask;
 import com.plu.huangxingli.androidlearningprocess.activity.TestInnerClass;
@@ -93,6 +96,9 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("Activity的跳转处理",SecondActivity.class);
         lessonMap.put("Activity启动模式测试", TestActivityTask.class);
         lessonMap.put("动画测试",GiftAnimationActivity.class);
+        lessonMap.put("ImageLoader 测市",ImageActivity.class);
+        lessonMap.put("礼物动画测试",MAnimateTest.class);
+        lessonMap.put("popup测试", PopupAnimateActivity.class);
 
 
 

@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:id="@+id/container"
+                android:background="@android:color/holo_blue_bright"
 
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -16,10 +17,13 @@
     <SurfaceView
 
         android:id="@+id/surfaceview"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="450dp"/>
 
     <EditText
+        android:id="@+id/edittext"
+
         android:layout_below="@+id/surfaceview"
         android:hint="测试输入法弹出后camera "
         android:layout_width="match_parent"
