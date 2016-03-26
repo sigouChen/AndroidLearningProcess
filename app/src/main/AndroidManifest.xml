@@ -215,6 +215,14 @@
             android:name=".activity.PopupAnimateActivity"
             android:label="@string/title_activity_popup_animate" >
         </activity>
+        <activity
+            android:name=".AnimateAbout.ArcActivity"
+            android:label="@string/title_activity_arc" >
+        </activity>
+        <activity
+            android:name=".AnimateAbout.TestArcAnimActivity"
+            android:label="@string/title_activity_test_arc_anim" >
+        </activity>
     </application>
 
 </manifest>

@@ -41,5 +41,7 @@
     <string name="title_activity_image">ImageActivity</string>
     <string name="title_activity_manimate_test">MAnimateTest</string>
     <string name="title_activity_popup_animate">PopupAnimateActivity</string>
+    <string name="title_activity_arc">ArcActivity</string>
+    <string name="title_activity_test_arc_anim">TestArcAnimActivity</string>
 
 </resources>

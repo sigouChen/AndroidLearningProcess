@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.plu.huangxingli.androidlearningprocess.AnimateAbout.AnimateActivity;
+import com.plu.huangxingli.androidlearningprocess.AnimateAbout.ArcActivity;
 import com.plu.huangxingli.androidlearningprocess.AnimateAbout.GiftAnimationActivity;
+import com.plu.huangxingli.androidlearningprocess.AnimateAbout.TestArcAnimActivity;
 import com.plu.huangxingli.androidlearningprocess.DrawerAbout.DrawerLayoutActivity;
 import com.plu.huangxingli.androidlearningprocess.FileAbout.FileActivity;
 import com.plu.huangxingli.androidlearningprocess.FloatWindow.FloatWindowActivity;
@@ -99,6 +101,8 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("ImageLoader 测市",ImageActivity.class);
         lessonMap.put("礼物动画测试",MAnimateTest.class);
         lessonMap.put("popup测试", PopupAnimateActivity.class);
+        lessonMap.put("扇形弹出动画",ArcActivity.class);
+        lessonMap.put("扇形图实现方式2", TestArcAnimActivity.class);
 
 
 

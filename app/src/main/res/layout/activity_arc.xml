@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                tools:context="com.plu.huangxingli.androidlearningprocess.AnimateAbout.ArcActivity">
+
+    <ImageButton
+        android:id="@+id/btn_mic"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/composer_music"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:visibility="invisible"
+        android:id="@+id/btn_flash"
+        android:src="@drawable/composer_place"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageButton
+        android:visibility="invisible"
+        android:id="@+id/btn_camera"
+        android:src="@drawable/composer_camera"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+
+        android:src="@drawable/composer_sleep"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+
+        />
+
+</RelativeLayout>
