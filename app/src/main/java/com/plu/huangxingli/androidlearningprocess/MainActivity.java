@@ -20,6 +20,7 @@ import com.plu.huangxingli.androidlearningprocess.RxJava.RxJavaActivity;
 import com.plu.huangxingli.androidlearningprocess.TimerAbout.TimerActivity;
 import com.plu.huangxingli.androidlearningprocess.ToastAbout.ToastActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.CustomViewActivity;
+import com.plu.huangxingli.androidlearningprocess.activity.DanmuKuActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.FrameWorkTest;
 import com.plu.huangxingli.androidlearningprocess.activity.HandlerThreadActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.ImageActivity;
@@ -104,6 +105,7 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("popup测试", PopupAnimateActivity.class);
         lessonMap.put("扇形弹出动画",SelfRcViewActivity.class);
         lessonMap.put("扇形图实现方式2", TestArcAnimActivity.class);
+        lessonMap.put("弹幕测试",DanmuKuActivity.class);
 
 
 
