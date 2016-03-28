@@ -43,7 +43,7 @@ public class ValueAnimatorActivity extends BaseActivity{
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 float value = (float) animation.getAnimatedValue();
-                Log.v("PLU","  ONAnimationUpdate value is "+value);
+                //Log.v("PLU","  ONAnimationUpdate value is "+value);
                 textView.setTextSize(value);
 
             }

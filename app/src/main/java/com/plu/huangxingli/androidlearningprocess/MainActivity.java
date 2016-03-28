@@ -25,6 +25,7 @@ import com.plu.huangxingli.androidlearningprocess.activity.HandlerThreadActivity
 import com.plu.huangxingli.androidlearningprocess.activity.ImageActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.MAnimateTest;
 import com.plu.huangxingli.androidlearningprocess.activity.PopupAnimateActivity;
+import com.plu.huangxingli.androidlearningprocess.activity.SelfRcViewActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.TabHostFragmentTest;
 import com.plu.huangxingli.androidlearningprocess.activity.TestActivityTask;
 import com.plu.huangxingli.androidlearningprocess.activity.TestInnerClass;
@@ -101,7 +102,7 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("ImageLoader 测市",ImageActivity.class);
         lessonMap.put("礼物动画测试",MAnimateTest.class);
         lessonMap.put("popup测试", PopupAnimateActivity.class);
-        lessonMap.put("扇形弹出动画",ArcActivity.class);
+        lessonMap.put("扇形弹出动画",SelfRcViewActivity.class);
         lessonMap.put("扇形图实现方式2", TestArcAnimActivity.class);
 
 

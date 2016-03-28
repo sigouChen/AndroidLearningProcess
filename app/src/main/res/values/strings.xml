@@ -43,5 +43,6 @@
     <string name="title_activity_popup_animate">PopupAnimateActivity</string>
     <string name="title_activity_arc">ArcActivity</string>
     <string name="title_activity_test_arc_anim">TestArcAnimActivity</string>
+    <string name="title_activity_self_rc_view">SelfRcViewActivity</string>
 
 </resources>

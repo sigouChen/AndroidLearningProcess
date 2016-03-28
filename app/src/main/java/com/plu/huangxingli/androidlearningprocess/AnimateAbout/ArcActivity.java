@@ -51,11 +51,7 @@ public class ArcActivity extends AppCompatActivity {
         }else{
             openToggle();
         }
-       /* int width=getResources().getDisplayMetrics().widthPixels;
-        PluLogUtil.log("----rightEdge is "+rightEdge+" ===width is "+width);
-        TranslateAnimation translateAnimation=new TranslateAnimation(0,-width/2,0,0);
-        translateAnimation.setDuration(2000);
-        imageButton.startAnimation(translateAnimation);*/
+
 
 
     }

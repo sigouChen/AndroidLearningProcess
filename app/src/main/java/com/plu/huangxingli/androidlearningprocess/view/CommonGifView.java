@@ -32,9 +32,13 @@ public class CommonGifView extends RelativeLayout {
     int giftWidth;
     private View giftOuterView;
 
+    boolean isRunning;
+
     private int showedCount = 1;
     private int gifCountWidth;
     private int giftImageWidth;
+    private LayoutParams originLayoutParams;
+    private float originY;
 
 
     public CommonGifView(Context context) {
@@ -56,19 +60,21 @@ public class CommonGifView extends RelativeLayout {
         return mGiftCount;
     }
 
-    public void setGiftCount(int mGiftCount) {
-        this.mGiftCount = mGiftCount;
-    }
+
 
     private void init(Context context) {
         LayoutInflater inflater = LayoutInflater.from(context);
         giftOuterView = inflater.inflate(R.layout.common_gift_layout, this, true);
         mImgGift = (ImageView) giftOuterView.findViewById(R.id.imageGift);
+
+
         mTvGifCount = (StrokeTextView) giftOuterView.findViewById(R.id.tv_gift_count);
         giftOuterView.post(new Runnable() {
             @Override
             public void run() {
                 giftWidth = giftOuterView.getWidth();
+                originY = giftOuterView.getY();
+                originLayoutParams = (LayoutParams) getLayoutParams();
             }
         });
 
@@ -86,12 +92,18 @@ public class CommonGifView extends RelativeLayout {
             }
         });
 
+
+
+
+
     }
 
     /*
     显示并展示礼物动画
      */
     public void startAnimate(int giftCount) {
+        this.mGiftCount = giftCount;
+        isRunning=true;
         final TranslateAnimation translateAnimation = new TranslateAnimation(-giftWidth, 0, 0, 0);
 
         translateAnimation.setDuration(1500);
@@ -142,7 +154,7 @@ public class CommonGifView extends RelativeLayout {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 float value = (float) animation.getAnimatedValue();
-                Log.v("PLU", "  ONAnimationUpdate value is " + value);
+               // Log.v("PLU", "  ONAnimationUpdate value is " + value);
                 //mTvGifCount.setTextSize(value);
                 mTvGifCount.setText("X" + showedCount);
                 mTvGifCount.setScaleX(value);
@@ -160,11 +172,36 @@ public class CommonGifView extends RelativeLayout {
             public void onAnimationEnd(Animator animation) {
 
                 AnimatorSet animatorSet = new AnimatorSet();
+             //   TranslateAnimation translateAnimation=new TranslateAnimation(0,0,0,-300);
                 ObjectAnimator transalteAnimator = ObjectAnimator.ofFloat(giftOuterView, "y", giftOuterView.getY(), giftOuterView.getY() - 300);
                 ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(giftOuterView, "alpha", 1.f, 0f);
                 animatorSet.play(transalteAnimator).with(alphaAnimator);
                 animatorSet.setDuration(2000);
                 animatorSet.start();
+                animatorSet.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        release();
+                        reset();
+                        isRunning=false;
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                });
+
                 PluLogUtil.log("-----onAnimationEnd");
             }
 
@@ -183,6 +220,19 @@ public class CommonGifView extends RelativeLayout {
         valueAnimator.setDuration(500);
         valueAnimator.start();
 
+    }
+
+    public boolean isRunning(){
+        return isRunning;
+    }
+
+    public void reset(){
+        showedCount=1;
+        mTvGifCount.setText("x1");
+        giftOuterView.setVisibility(INVISIBLE);
+        giftOuterView.setAlpha(1);
+        giftOuterView.setY(originY);
+        giftOuterView.setLayoutParams(originLayoutParams);
     }
 
     /**
