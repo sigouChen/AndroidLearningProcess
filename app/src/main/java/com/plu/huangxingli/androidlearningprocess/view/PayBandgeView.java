@@ -88,8 +88,6 @@ public class PayBandgeView extends LinearLayout {
                 isRunning = false;
                 danmu.clearAnimation();
                 xAnimator.removeAllListeners();
-
-
             }
 
             @Override
@@ -110,6 +108,9 @@ public class PayBandgeView extends LinearLayout {
         return isRunning;
     }
 
-
-
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int widthMeasure=MeasureSpec.makeMeasureSpec(windowWidth,MeasureSpec.EXACTLY);
+        super.onMeasure(widthMeasure, heightMeasureSpec);
+    }
 }

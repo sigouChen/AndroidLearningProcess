@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                tools:context="com.plu.huangxingli.androidlearningprocess.activity.LongImageViewActivity">
+    <com.plu.huangxingli.androidlearningprocess.view.GiftView
+
+        android:id="@+id/imageview_long"
+        android:scrollbars="none"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+   <!-- <ImageView
+        android:src="@drawable/xiaolong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

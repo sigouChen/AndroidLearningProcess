@@ -45,5 +45,6 @@
     <string name="title_activity_test_arc_anim">TestArcAnimActivity</string>
     <string name="title_activity_self_rc_view">SelfRcViewActivity</string>
     <string name="title_activity_danmu_ku">DanmuKuActivity</string>
+    <string name="title_activity_long_image_view">LongImageViewActivity</string>
 
 </resources>

@@ -6,5 +6,10 @@
         <attr name="stroke_text_stroke_width" format="dimension" />
     </declare-styleable>
 
+    <declare-styleable name="ParallaxView">
+        <attr name="speed" format="dimension" />
+        <attr name="src" format="reference" />
+    </declare-styleable>
+
 
 </resources>

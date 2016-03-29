@@ -48,8 +48,8 @@ public class DanmuKuActivity extends Activity {
                                 PayBandgeView payBandgeView=bandgeList.get(j);
                                 if (payBandgeView!=null&&!payBandgeView.isRunning()){
                                     PluLogUtil.log("----di "+j+"  ge paybandgeview is free");
-                                    payBandgeView.setDanmuContent(" content 444444444" + 1);
-                                    payBandgeView.setSenderName("lily333333333 " + i);
+                                    payBandgeView.setDanmuContent(" content 4444444447777777777777777777777777777777" + 1);
+                                    payBandgeView.setSenderName("lily333333333777777777777777777777777777777777777 " + i);
                                     payBandgeView.send();
                                     hasFree=true;
                                     break;
@@ -59,11 +59,11 @@ public class DanmuKuActivity extends Activity {
                             if (!hasFree){
                                 hasFree=false;
                                 PayBandgeView payBandgeView = new PayBandgeView(DanmuKuActivity.this);
-                                payBandgeView.setDanmuContent("i am num66666666666666666666666 " + i);
-                                payBandgeView.setSenderName("lily num 555555555555555555555555555 " + i);
+                                payBandgeView.setDanmuContent("i am num6666666666666666666666666666666666666666666666666666666 " + i);
+                                payBandgeView.setSenderName("lily num 555555555555555555555555555555555555555555555555555555555555555555555555555555555 " + i);
                                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                                 layoutParams.height = 200;
-                                layoutParams.weight = LinearLayout.LayoutParams.MATCH_PARENT;
+                                layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
                                 layoutParams.rightMargin = 500;
                                 payBandgeView.send();
                                 linearLayout.addView(payBandgeView, layoutParams);
@@ -92,11 +92,11 @@ public class DanmuKuActivity extends Activity {
 
                          //   PluLogUtil.log("-----firstBange is  " + firstBandgeView);
                             PayBandgeView payBandgeView = new PayBandgeView(DanmuKuActivity.this);
-                            payBandgeView.setDanmuContent("i am num " + i);
-                            payBandgeView.setSenderName("lily num " + i);
+                            payBandgeView.setDanmuContent("i am num0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 " + i);
+                            payBandgeView.setSenderName("lily num00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 " + i);
                             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                             layoutParams.height = 200;
-                            layoutParams.weight = LinearLayout.LayoutParams.MATCH_PARENT;
+                            layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
                             layoutParams.rightMargin = 500;
                             payBandgeView.send();
                             linearLayout.addView(payBandgeView, layoutParams);

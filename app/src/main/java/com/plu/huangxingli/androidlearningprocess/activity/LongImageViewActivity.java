@@ -1,56 +1,46 @@
 package com.plu.huangxingli.androidlearningprocess.activity;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
+import android.graphics.Matrix;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
 
 import com.plu.huangxingli.androidlearningprocess.R;
-import com.plu.huangxingli.androidlearningprocess.SecondActivity;
 import com.plu.huangxingli.androidlearningprocess.Utils.PluLogUtil;
+import com.plu.huangxingli.androidlearningprocess.view.GiftView;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-
-public class TestActivityTask extends AppCompatActivity {
-
-    @Bind(R.id.button)
-    Button button;
-
-    @OnClick(R.id.button) void jumpToOtherActivity(){
-
-            Uri uri=Uri.parse("tel:13305393782");
-            Intent intent=new Intent(Intent.ACTION_VIEW,uri);
-            startActivityForResult(intent,100);
-
-    }
+public class LongImageViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_activity_task);
-        ButterKnife.bind(this);
+        setContentView(R.layout.activity_long_image_view);
+        final GiftView imageView= (GiftView) findViewById(R.id.imageview_long);
+        imageView.setSmoothScrollingEnabled(false);
+        imageView.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+        int height=getResources().getDisplayMetrics().heightPixels;
+        Button button= (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageView.startScroll();
+            }
+        });
+      //  PluLogUtil.log("---height is "+height);
 
 
-    }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        PluLogUtil.log("---onActivityResult resultCode is "+resultCode+"requst code is "+requestCode);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_test_activity_task, menu);
+        getMenuInflater().inflate(R.menu.menu_long_image_view, menu);
         return true;
     }
 

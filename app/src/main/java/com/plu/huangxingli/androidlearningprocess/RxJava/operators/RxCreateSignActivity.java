@@ -199,7 +199,7 @@ public class RxCreateSignActivity extends BaseActivity {
 
             @Override
             public void onNext(final Long aLong) {
-                PluLogUtil.log("-long subscribe onNext-thread is " + Thread.currentThread().getName());
+                PluLogUtil.log("-longpic subscribe onNext-thread is " + Thread.currentThread().getName());
                 showLog("onNext : " + aLong);
             }
         };

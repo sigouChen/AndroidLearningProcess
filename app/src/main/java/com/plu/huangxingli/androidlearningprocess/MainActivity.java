@@ -24,6 +24,7 @@ import com.plu.huangxingli.androidlearningprocess.activity.DanmuKuActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.FrameWorkTest;
 import com.plu.huangxingli.androidlearningprocess.activity.HandlerThreadActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.ImageActivity;
+import com.plu.huangxingli.androidlearningprocess.activity.LongImageViewActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.MAnimateTest;
 import com.plu.huangxingli.androidlearningprocess.activity.PopupAnimateActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.SelfRcViewActivity;
@@ -106,6 +107,8 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("扇形弹出动画",SelfRcViewActivity.class);
         lessonMap.put("扇形图实现方式2", TestArcAnimActivity.class);
         lessonMap.put("弹幕测试",DanmuKuActivity.class);
+
+        lessonMap.put("长图测试", LongImageViewActivity.class);
 
 
 

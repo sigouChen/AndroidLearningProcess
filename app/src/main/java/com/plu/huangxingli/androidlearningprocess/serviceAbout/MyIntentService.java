@@ -25,7 +25,7 @@ public class MyIntentService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         Log.v(TAG,"onHandleIntent");
-        /*long futrueTime=System.currentTimeMillis()+5000;
+        /*longpic futrueTime=System.currentTimeMillis()+5000;
         //执行5s钟。
         while (System.currentTimeMillis()<futrueTime) {
             Log.v(TAG, "ONHANDLEINTENT");

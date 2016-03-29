@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.plu.huangxingli.androidlearningprocess">
+    package="com.plu.huangxingli.androidlearningprocess" >
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -39,11 +39,11 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,15 +54,15 @@
         <service
             android:name=".serviceAbout.MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
         <service android:name=".serviceAbout.MyIntentService" />
 
         <activity android:name=".activity.TimerTextViewActivity" />
         <activity android:name=".AnimateAbout.AnimateActivity" />
         <activity
             android:name=".serviceAbout.ServiceActivity$InnerActivity"
-            android:label="@string/title_activity_second"></activity>
-        <activity android:name=".SecondActivity">
+            android:label="@string/title_activity_second" />
+        <activity android:name=".SecondActivity" >
             <intent-filter>
                 <action android:name="com.google.app.myapp.plu" />
             </intent-filter>
@@ -71,16 +71,16 @@
         <activity android:name=".TimerAbout.TimerActivity" />
         <activity
             android:name=".serviceAbout.ServiceActivity"
-            android:label="MyActivity"></activity>
+            android:label="MyActivity" />
         <activity android:name=".ToastAbout.ToastActivity" />
         <activity
             android:name=".BaseActivity"
-            android:label="@string/title_activity_base"></activity>
+            android:label="@string/title_activity_base" />
         <activity android:name=".activity.ValueAnimatorActivity" />
         <activity android:name=".realMvp.view.ArticleListActivity" />
         <activity
             android:name=".FloatWindow.FloatWindowActivity"
-            android:label="@string/title_activity_float_window"></activity>
+            android:label="@string/title_activity_float_window" />
         <activity android:name=".activity.TimerTaskActivity" />
         <activity android:name=".RxJava.operators.RxCreateSignActivity" />
         <activity
@@ -94,106 +94,110 @@
         <service
             android:name=".FloatWindow.FloatWindowService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity
             android:name=".activity.FrameWorkTest"
-            android:label="@string/title_activity_frame_work_test"></activity>
+            android:label="@string/title_activity_frame_work_test" />
         <activity android:name=".activity.TestInnerClass" />
         <activity
             android:name=".retrofit.Main2Activity"
-            android:label="@string/title_activity_main2"></activity>
+            android:label="@string/title_activity_main2" />
         <activity
             android:name=".mvp.MvpActivity"
-            android:label="@string/title_activity_mvp"></activity>
+            android:label="@string/title_activity_mvp" />
         <activity
             android:name=".activity.ViewMeasureActivity"
-            android:label="@string/title_activity_view_measure"></activity>
+            android:label="@string/title_activity_view_measure" />
         <activity
             android:name=".touchEvent.TestTouchEvent"
-            android:label="@string/title_activity_test_touch_event"></activity>
+            android:label="@string/title_activity_test_touch_event" />
         <activity
             android:name=".RxJava.RxJavaActivity"
-            android:label="@string/title_activity_rx_java"></activity>
+            android:label="@string/title_activity_rx_java" />
         <activity
             android:name=".activity.CustomViewActivity"
             android:label="@string/title_activity_custom_view"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".RxJava.RXCatogry"
-            android:label="@string/title_activity_rxcatogry"></activity>
+            android:label="@string/title_activity_rxcatogry" />
         <activity
             android:name=".RxJava.RetrofitWithRxJava"
-            android:label="@string/title_activity_retrofit_with_rx_java"></activity>
+            android:label="@string/title_activity_retrofit_with_rx_java" />
         <activity
             android:name=".RxJava.RxSignActivity"
-            android:label="@string/title_activity_rx_sign"></activity>
+            android:label="@string/title_activity_rx_sign" />
         <activity
             android:name=".activity.OnActivityResultAc"
-            android:label="@string/title_activity_on_activity_result"></activity>
+            android:label="@string/title_activity_on_activity_result" />
         <activity
             android:name=".RxJava.operators.ChangeSignActivity"
             android:label="@string/title_activity_change_sign"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".RxJava.OperatorList"
-            android:label="@string/title_activity_operator_list"></activity>
+            android:label="@string/title_activity_operator_list" />
         <activity
             android:name=".RxJava.operators.FilterOperators"
-            android:label="@string/title_activity_filter_operators"></activity>
+            android:label="@string/title_activity_filter_operators" />
         <activity
             android:name=".RxJava.operators.CombineOperators"
-            android:label="@string/title_activity_combine_operators"></activity>
+            android:label="@string/title_activity_combine_operators" />
         <activity
             android:name=".RxJava.operators.ErrorHandlerOperators"
-            android:label="@string/title_activity_error_handler_operators"></activity>
+            android:label="@string/title_activity_error_handler_operators" />
         <activity
             android:name=".RxJava.operators.AssistOperators"
-            android:label="@string/title_activity_assist_operators"></activity>
+            android:label="@string/title_activity_assist_operators" />
         <activity
             android:name=".RxJava.operators.ConditionAndBooleanOperators"
-            android:label="@string/title_activity_condition_and_boolean_operators"></activity>
+            android:label="@string/title_activity_condition_and_boolean_operators" />
         <activity
             android:name=".RxJava.operators.MathematicalAndAggregateOperators"
-            android:label="@string/title_activity_mathematical_and_aggregate_operators"></activity>
+            android:label="@string/title_activity_mathematical_and_aggregate_operators" />
         <activity
             android:name=".RxJava.operators.AsyOperators"
-            android:label="@string/title_activity_asy_operators"></activity>
+            android:label="@string/title_activity_asy_operators" />
         <activity
             android:name=".RxJava.operators.ConnectionOperators"
-            android:label="@string/title_activity_connection_operators"></activity>
+            android:label="@string/title_activity_connection_operators" />
         <activity
             android:name=".activity.TestActivityTask"
             android:label="@string/title_activity_test_activity_task"
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask" />
         <activity
             android:name=".AnimateAbout.GiftAnimationActivity"
-            android:label="@string/title_activity_gift_animation"></activity>
+            android:label="@string/title_activity_gift_animation" />
         <activity
             android:name=".RxBindingUsing.RxBindingActivityUsing"
             android:label="@string/title_activity_rx_binding_activity_using"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.ImageActivity"
-            android:label="@string/title_activity_image"></activity>
+            android:label="@string/title_activity_image" />
         <activity
             android:name=".activity.MAnimateTest"
-            android:label="@string/title_activity_manimate_test"></activity>
+            android:label="@string/title_activity_manimate_test" />
         <activity
             android:name=".activity.PopupAnimateActivity"
-            android:label="@string/title_activity_popup_animate"></activity>
+            android:label="@string/title_activity_popup_animate" />
         <activity
             android:name=".AnimateAbout.ArcActivity"
-            android:label="@string/title_activity_arc"></activity>
+            android:label="@string/title_activity_arc" />
         <activity
             android:name=".AnimateAbout.TestArcAnimActivity"
-            android:label="@string/title_activity_test_arc_anim"></activity>
+            android:label="@string/title_activity_test_arc_anim" />
         <activity
             android:name=".activity.SelfRcViewActivity"
-            android:label="@string/title_activity_self_rc_view"></activity>
+            android:label="@string/title_activity_self_rc_view" />
         <activity
             android:name=".activity.DanmuKuActivity"
-            android:label="@string/title_activity_danmu_ku"></activity>
+            android:label="@string/title_activity_danmu_ku" />
+        <activity
+            android:name=".activity.LongImageViewActivity"
+            android:label="@string/title_activity_long_image_view" >
+        </activity>
     </application>
 
 </manifest>

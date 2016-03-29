@@ -93,7 +93,7 @@ public class ServiceActivity extends BaseActivity {
                  -----------------------------------------------------------------------------------------------------------------
                  If a component starts the service by calling startService() (which results in a call to onStartCommand()),
                  then the service remains running until it stops itself with stopSelf() or another component stops it by calling stopService().
-                 If a component calls bindService() to create the service (and onStartCommand() is not called), then the service runs only as long as the component is bound to it.
+                 If a component calls bindService() to create the service (and onStartCommand() is not called), then the service runs only as longpic as the component is bound to it.
                  Once the service is unbound from all clients, the system destroys it.
                  */
                 /***
@@ -152,7 +152,7 @@ public class ServiceActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
+        // automatically handle clicks on the Home/Up button, so longpic
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
@@ -187,7 +187,7 @@ public class ServiceActivity extends BaseActivity {
         @Override
         public boolean onOptionsItemSelected(MenuItem item) {
             // Handle action bar item clicks here. The action bar will
-            // automatically handle clicks on the Home/Up button, so long
+            // automatically handle clicks on the Home/Up button, so longpic
             // as you specify a parent activity in AndroidManifest.xml.
             int id = item.getItemId();
             if (id == R.id.action_settings) {
