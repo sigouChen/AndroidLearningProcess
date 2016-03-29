@@ -1,17 +1,20 @@
 package com.plu.huangxingli.androidlearningprocess.view;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Context;
-import android.text.Html;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.plu.huangxingli.androidlearningprocess.R;
-import com.plu.huangxingli.androidlearningprocess.app.App;
+import com.plu.huangxingli.androidlearningprocess.Utils.PluLogUtil;
 
 
 /**
@@ -25,6 +28,7 @@ public class PayBandgeView extends LinearLayout {
     private boolean isRunning;
 
     private int windowWidth;
+    private View danmu;
 
     public PayBandgeView(Context context) {
         super(context);
@@ -43,7 +47,8 @@ public class PayBandgeView extends LinearLayout {
 
     private void init(Context context){
         LayoutInflater inflater=LayoutInflater.from(context);
-        View danmu=inflater.inflate(R.layout.paybandgelayout, this, true);
+        danmu = inflater.inflate(R.layout.paybandgelayout, this, true);
+
         mDanmuName = (TextView) danmu.findViewById(R.id.tvdanmu_name);
         mDanmuContent = (TextView) danmu.findViewById(R.id.tvdanmu_content);
         windowWidth=getResources().getDisplayMetrics().widthPixels;
@@ -62,32 +67,49 @@ public class PayBandgeView extends LinearLayout {
     public void send(){
         isRunning=true;
         setVisibility(VISIBLE);
-        TranslateAnimation translateAnimation=new TranslateAnimation(0, windowWidth,0,0);
-        translateAnimation.setDuration(2000);
-        startAnimation(translateAnimation);
-        translateAnimation.setAnimationListener(new Animation.AnimationListener() {
+        final ObjectAnimator xAnimator=ObjectAnimator.ofFloat(danmu,"x",0,windowWidth);
+        xAnimator.setDuration(2000);
+        xAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
+            public void onAnimationUpdate(ValueAnimator animation) {
+                //  PluLogUtil.log("-----value iis "+value);
+                danmu.setTranslationX((Float) animation.getAnimatedValue());
+            }
+        });
+        xAnimator.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                PluLogUtil.log("----onAnimationStart");
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                PluLogUtil.log("-----onAnimationEnd");
+                isRunning = false;
+                danmu.clearAnimation();
+                xAnimator.removeAllListeners();
+
 
             }
 
             @Override
-            public void onAnimationEnd(Animation animation) {
-                isRunning=false;
+            public void onAnimationCancel(Animator animation) {
 
-                clearAnimation();
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation) {
+            public void onAnimationRepeat(Animator animation) {
 
             }
         });
+        xAnimator.start();
+
     }
 
     public boolean isRunning(){
         return isRunning;
     }
+
 
 
 }
