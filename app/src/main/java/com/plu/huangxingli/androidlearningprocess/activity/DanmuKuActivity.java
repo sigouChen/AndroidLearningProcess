@@ -1,16 +1,14 @@
 package com.plu.huangxingli.androidlearningprocess.activity;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.plu.huangxingli.androidlearningprocess.R;
 import com.plu.huangxingli.androidlearningprocess.Utils.PluLogUtil;
 import com.plu.huangxingli.androidlearningprocess.view.PayBandgeView;
+import com.plu.huangxingli.androidlearningprocess.view.PayBandgeView1;
 
 import java.util.ArrayList;
 import java.util.Timer;

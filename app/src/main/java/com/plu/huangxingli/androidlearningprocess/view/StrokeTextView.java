@@ -65,20 +65,20 @@ public class StrokeTextView extends TextView {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        CharSequence tt = borderText.getText();
+       // CharSequence tt = borderText.getText();
 
         //两个TextView上的文字和图片必须一致，防止borderText和本StrokeTextView的图片重叠
-        if (tt == null || !tt.equals(this.getText())
+       /* if (tt == null || !tt.equals(this.getText())
                 || getCompoundDrawables()[0] != borderText.getCompoundDrawables()[0]
                 || getCompoundDrawables()[1] != borderText.getCompoundDrawables()[1]
                 || getCompoundDrawables()[2] != borderText.getCompoundDrawables()[2]
                 || getCompoundDrawables()[3] != borderText.getCompoundDrawables()[3]) {
             borderText.setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1],
-                    getCompoundDrawables()[2], getCompoundDrawables()[3]);
-            borderText.setText(getText());
-            borderText.invalidate();
-            this.postInvalidate();
-        }
+                    getCompoundDrawables()[2], getCompoundDrawables()[3]);*/
+          //  borderText.setText(getText());
+           // borderText.invalidate();
+            //this.postInvalidate();
+       // }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         borderText.measure(widthMeasureSpec, heightMeasureSpec);
     }

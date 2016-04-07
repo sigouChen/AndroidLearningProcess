@@ -24,16 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
 
-        <ImageView
-            android:layout_toRightOf="@+id/tvContent"
-            android:src="@drawable/chat_item_gift_stick"
-            android:id="@+id/imageGift"
-            android:visibility="invisible"
 
-            android:layout_toLeftOf="@+id/tv_gift_count"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
 
 
         <com.plu.huangxingli.androidlearningprocess.view.StrokeTextView
@@ -47,6 +38,17 @@
             android:layout_height="wrap_content"/>
 
     </RelativeLayout>
+
+    <ImageView
+
+        android:src="@drawable/chat_item_gift_stick"
+        android:id="@+id/imageGift"
+        android:visibility="invisible"
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+
 
 
 

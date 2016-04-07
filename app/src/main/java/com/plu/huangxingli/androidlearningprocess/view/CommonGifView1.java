@@ -7,7 +7,6 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
@@ -23,10 +22,11 @@ import com.plu.huangxingli.androidlearningprocess.Utils.UiTools;
 /**
  * Created by lily on 16-3-23.普通礼物
  */
-public class CommonGifView extends RelativeLayout {
+public class CommonGifView1 extends RelativeLayout {
 
     ImageView mImgGift;
     TextView mTvGifCount;
+    TextView mTvGiftName;
 
 
     int mGiftCount;
@@ -40,21 +40,20 @@ public class CommonGifView extends RelativeLayout {
     private int giftImageWidth;
     private LayoutParams originLayoutParams;
     private float originY;
-    private int innerLayoutWidth;
-    private RelativeLayout innerLayout;
+    private int tvTitleWidth;
 
 
-    public CommonGifView(Context context) {
+    public CommonGifView1(Context context){
         super(context);
         init(context);
     }
 
-    public CommonGifView(Context context, AttributeSet attrs) {
+    public CommonGifView1(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
-    public CommonGifView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CommonGifView1(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
     }
@@ -69,10 +68,8 @@ public class CommonGifView extends RelativeLayout {
         LayoutInflater inflater = LayoutInflater.from(context);
         giftOuterView = inflater.inflate(R.layout.common_gift_layout, this, true);
         mImgGift = (ImageView) giftOuterView.findViewById(R.id.imageGift);
-        innerLayout = (RelativeLayout) giftOuterView.findViewById(R.id.layout_gift);
-        innerLayoutWidth = UiTools.getMeasureWidth(innerLayout);
-
-
+        mTvGiftName= (TextView) giftOuterView.findViewById(R.id.tvContent);
+       // tvTitleWidth = UiTools.getMeasureWidth(mTvGiftName);
 
 
         mTvGifCount = (StrokeTextView) giftOuterView.findViewById(R.id.tv_gift_count);
@@ -84,7 +81,6 @@ public class CommonGifView extends RelativeLayout {
                 originLayoutParams = (LayoutParams) getLayoutParams();
             }
         });
-
 
         mTvGifCount.post(new Runnable() {
             @Override
@@ -106,40 +102,13 @@ public class CommonGifView extends RelativeLayout {
 
     }
 
-
-
     /*
     显示并展示礼物动画
      */
     public void startAnimate(int giftCount) {
         this.mGiftCount = giftCount;
         isRunning=true;
-        ObjectAnimator objectAnimator=ObjectAnimator.ofFloat(innerLayout, "translationX", -giftWidth,0);
-        objectAnimator.setDuration(1500);
-        objectAnimator.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-                giftOuterView.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                imageGifAnimate();
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-        });
-        objectAnimator.start();
-
-       /* final TranslateAnimation translateAnimation = new TranslateAnimation(-giftWidth, 0, 0, 0);
+        final TranslateAnimation translateAnimation = new TranslateAnimation(-giftWidth, tvTitleWidth+20, 0, 0);
 
         translateAnimation.setDuration(1500);
         translateAnimation.setAnimationListener(new Animation.AnimationListener() {
@@ -152,7 +121,7 @@ public class CommonGifView extends RelativeLayout {
             public void onAnimationEnd(Animation animation) {
 
                 imageGifAnimate();
-
+                handGif();
 
             }
 
@@ -162,28 +131,52 @@ public class CommonGifView extends RelativeLayout {
             }
         });
         setVisibility(VISIBLE);
-        innerLayout.startAnimation(translateAnimation);*/
+        giftOuterView.startAnimation(translateAnimation);
 
     }
 
+    public void animGiftValue(){
+        giftImageWidth=UiTools.getMeasureWidth(mImgGift);
+        tvTitleWidth=UiTools.getMeasureWidth(mTvGiftName);
+        final ValueAnimator valueAnimatorGift=ValueAnimator.ofFloat(-giftImageWidth,(tvTitleWidth+20));
+        valueAnimatorGift.setDuration(1000);
+        valueAnimatorGift.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mImgGift.setTranslationX((Float) animation.getAnimatedValue());
+            }
+        });
+        valueAnimatorGift.start();
 
 
-    /**
-     * 具体礼物动画
-     */
+    }
 
-    private void imageGifAnimate() {
-        ObjectAnimator objectAnimator=ObjectAnimator.ofFloat(mImgGift,"translationX",-giftWidth,innerLayoutWidth);
-        objectAnimator.setDuration(1000);
-        objectAnimator.addListener(new Animator.AnimatorListener() {
+    /*
+   显示并展示礼物动画
+    */
+    public void startAnimateValue(final int giftCount) {
+        this.mGiftCount = giftCount;
+        isRunning=true;
+        ValueAnimator valueAnimator=ValueAnimator.ofFloat(-giftWidth, 0);
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                giftOuterView.setTranslationX((Float) animation.getAnimatedValue());
+            }
+        });
+        valueAnimator.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
+                setVisibility(VISIBLE);
 
             }
 
             @Override
             public void onAnimationEnd(Animator animation) {
+                animGiftValue();
                 handGif();
+
+
             }
 
             @Override
@@ -196,28 +189,48 @@ public class CommonGifView extends RelativeLayout {
 
             }
         });
-        objectAnimator.start();
-       /* TranslateAnimation gifCountTranslation = new TranslateAnimation( -giftImageWidth, innerLayoutWidth,0, 0);
-        gifCountTranslation.setDuration(1000);
-        gifCountTranslation.setFillAfter(true);
-        mImgGift.startAnimation(gifCountTranslation);
-        gifCountTranslation.setAnimationListener(new Animation.AnimationListener() {
+
+        valueAnimator.setDuration(2000);
+        valueAnimator.start();
+
+
+       /* final TranslateAnimation translateAnimation = new TranslateAnimation(-giftWidth, 0, 0, 0);
+
+        translateAnimation.setDuration(1500);
+        translateAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-                mImgGift.setVisibility(VISIBLE);
+                giftOuterView.setVisibility(View.VISIBLE);
+                giftOuterView.setTranslationX();
             }
 
             @Override
             public void onAnimationEnd(Animation animation) {
+
+                imageGifAnimate();
                 handGif();
+
             }
 
             @Override
             public void onAnimationRepeat(Animation animation) {
-                    mImgGift.setVisibility(INVISIBLE);
-                    mImgGift.clearAnimation();
+
             }
-        });*/
+        });
+        setVisibility(VISIBLE);
+        giftOuterView.startAnimation(translateAnimation);*/
+
+    }
+
+    /**
+     * 具体礼物动画
+     */
+
+    private void imageGifAnimate() {
+        mImgGift.setVisibility(VISIBLE);
+        TranslateAnimation gifCountTranslation = new TranslateAnimation(-giftImageWidth,tvTitleWidth+20 , 0, 0);
+        gifCountTranslation.setDuration(1500);
+        mImgGift.startAnimation(gifCountTranslation);
     }
 
     /*
@@ -249,9 +262,9 @@ public class CommonGifView extends RelativeLayout {
             @Override
             public void onAnimationEnd(Animator animation) {
 
-                final AnimatorSet animatorSet = new AnimatorSet();
+                AnimatorSet animatorSet = new AnimatorSet();
              //   TranslateAnimation translateAnimation=new TranslateAnimation(0,0,0,-300);
-                ObjectAnimator transalteAnimator = ObjectAnimator.ofFloat(giftOuterView, "translationY",0, - 300);
+                ObjectAnimator transalteAnimator = ObjectAnimator.ofFloat(giftOuterView, "y", giftOuterView.getY(), giftOuterView.getY() - 300);
                 ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(giftOuterView, "alpha", 1.f, 0f);
                 animatorSet.play(transalteAnimator).with(alphaAnimator);
                 animatorSet.setDuration(2000);
@@ -264,9 +277,8 @@ public class CommonGifView extends RelativeLayout {
 
                     @Override
                     public void onAnimationEnd(Animator animation) {
-                        animatorSet.removeAllListeners();
                         release();
-                        reset();
+                     //   reset();
                         isRunning=false;
                     }
 
@@ -308,11 +320,10 @@ public class CommonGifView extends RelativeLayout {
     public void reset(){
         showedCount=1;
         mTvGifCount.setText("x1");
-        mImgGift.setVisibility(INVISIBLE);
         giftOuterView.setVisibility(INVISIBLE);
         giftOuterView.setAlpha(1);
-       // giftOuterView.setY(originY);
-     //   giftOuterView.setLayoutParams(originLayoutParams);
+        giftOuterView.setY(originY);
+        giftOuterView.setLayoutParams(originLayoutParams);
     }
 
     /**

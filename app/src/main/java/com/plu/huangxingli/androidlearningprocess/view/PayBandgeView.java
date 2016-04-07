@@ -135,6 +135,7 @@ public  class PayBandgeView extends LinearLayout {
         isRunning=true;
         setVisibility(VISIBLE);
         final int viewWidth= UiTools.getMeasureWidth(this);
+
         final ObjectAnimator xAnimator=ObjectAnimator.ofFloat(danmu,"x",windowWidth,windowWidth-viewWidth);
         xAnimator.setDuration(viewWidth/(windowWidth/2));
         xAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

@@ -198,6 +198,18 @@
             android:name=".activity.LongImageViewActivity"
             android:label="@string/title_activity_long_image_view" >
         </activity>
+        <activity
+            android:name=".activity.AnimatorSet"
+            android:label="@string/title_activity_animator_set" >
+        </activity>
+        <activity
+            android:name=".activity.TestFontActivity"
+            android:label="@string/title_activity_test_font" >
+        </activity>
+        <activity
+            android:name=".activity.ViewHandlerActivity"
+            android:label="@string/title_activity_view_handler" >
+        </activity>
     </application>
 
 </manifest>

@@ -46,5 +46,8 @@
     <string name="title_activity_self_rc_view">SelfRcViewActivity</string>
     <string name="title_activity_danmu_ku">DanmuKuActivity</string>
     <string name="title_activity_long_image_view">LongImageViewActivity</string>
+    <string name="title_activity_animator_set">AnimatorSet</string>
+    <string name="title_activity_test_font">TestFontActivity</string>
+    <string name="title_activity_view_handler">ViewHandlerActivity</string>
 
 </resources>

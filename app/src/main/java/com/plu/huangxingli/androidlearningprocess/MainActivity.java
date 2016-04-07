@@ -1,5 +1,6 @@
 package com.plu.huangxingli.androidlearningprocess;
 
+import android.animation.AnimatorSet;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.ArrayMap;
@@ -30,11 +31,13 @@ import com.plu.huangxingli.androidlearningprocess.activity.PopupAnimateActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.SelfRcViewActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.TabHostFragmentTest;
 import com.plu.huangxingli.androidlearningprocess.activity.TestActivityTask;
+import com.plu.huangxingli.androidlearningprocess.activity.TestFontActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.TestInnerClass;
 import com.plu.huangxingli.androidlearningprocess.activity.TimerTaskActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.ValueAnimatorActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.SurfaceViewTest;
 import com.plu.huangxingli.androidlearningprocess.activity.TimerTextViewActivity;
+import com.plu.huangxingli.androidlearningprocess.activity.ViewHandlerActivity;
 import com.plu.huangxingli.androidlearningprocess.activity.ViewMeasureActivity;
 import com.plu.huangxingli.androidlearningprocess.bmobAbout.BomboActivity;
 import com.plu.huangxingli.androidlearningprocess.fragment.TabHostFragment1;
@@ -109,6 +112,9 @@ public class MainActivity extends BaseActivity {
         lessonMap.put("弹幕测试",DanmuKuActivity.class);
 
         lessonMap.put("长图测试", LongImageViewActivity.class);
+        lessonMap.put("AnimatorSet测试", com.plu.huangxingli.androidlearningprocess.activity.AnimatorSet.class);
+        lessonMap.put("字体测试", TestFontActivity.class);
+        lessonMap.put("view自带handler的使用", ViewHandlerActivity.class);
 
 
 
